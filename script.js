@@ -180,239 +180,612 @@ let albums = [
         link: "https://hizzme.bandcamp.com/album/--4"
     }
 ];
+
+// let events = [
+//     {
+//         title: "House Openning",
+//         date: "Wednesday, September 19, 2017",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/House Openning Poster.jpg"
+//     },
+//     {
+//         title: "Khaleet 001 / خليط ٠٠١",
+//         date: "Wednesday, December 13, 2017",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Khaleet 002 / خليط ٠٠٢",
+//         date: "Friday, December 29, 2017",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Khaleet 003 / خليط ٠٠٣",
+//         date: "Saturday, January 13, 2018",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Thursday Night Beat Down feat. R A G E H",
+//         date: "Thursday, January 18, 2018",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/BEATDOWN.jpg"
+//     },
+//     {
+//         title: "Khaleet 004 / خليط ٠٠٤",
+//         date: "Friday, January 26, 2018",
+//         location: "Uncle Sam Pub, Amman",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Drummer B x ONSY x Bashar Suleiman",
+//         date: "Wednesday, March 14, 2018",
+//         location: "Zigzag, Cairo",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Khaleet 005 / خليط ٠٠٥",
+//         date: "Wednesday, April 25, 2018",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Khaleet 006 / خليط ٠٠٦",
+//         date: "Sunday, May 27, 2018",
+//         location: "Kiesling, Detroit",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Livestream w Youssef Abouzeid X Bashar Suleiman X Torkhy",
+//         date: "Friday, July 20, 2018 @ 7:00PM",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/Livestream w Youssef Abouzeid X Bashar Suleiman X Torkhy.jpg"
+//     },
+//     {
+//         title: "INSIN - Livestream",
+//         date: "Wednesday, August 8, 2018",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/Freya Edmondes-Livestream.jpg"
+//     },
+//     {
+//         title: "Youssef Abouzeid 'Captain Solo' Release Party",
+//         date: "Wednesday, August 29, 2018 @ 7:00PM",
+//         location: "Bardo Clubhouse, Maadi",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "assembli X Hizz present Cairo Invasion",
+//         date: "Friday, November 16, 2018",
+//         location: "MENA Tyche Hotel, Amman",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "IV IV أربعة أربعة",
+//         date: "Sunday, February 3, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/44.jpg"
+//     },
+//     {
+//         title: "Weight of the Heart :: Bana Kabalan",
+//         date: "Thursday, March 21, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/Weight of the Heart  Bana Kabalan.jpg"
+//     },
+//     {
+//         title: "Shake and Destroy :: DJ Haram x Drummer B x Bashar Suleiman",
+//         date: "Thursday, March 28, 2019",
+//         location: "Unicorn Garden, Cairo",
+//         poster: "assets/imgs/events/Shake and Destroy  DJ Haram x Drummer B x Bashar Suleiman.jpg"
+//     },
+//     {
+//         title: "Record Store Day OPEN HOUSE",
+//         date: "Saturday, April 13, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/Record Store Day OPEN HOUSE.jpg"
+//     },
+//     {
+//         title: "Open House",
+//         date: "Saturday, July 27, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/Open House.jpg"
+//     },
+//     {
+//         title: "Kafr El-Dauwar Records X HIZZ (Open House)",
+//         date: "Saturday, August 10, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/hizz open house.jpg"
+//     },
+//     {
+//         title: "J!N Album Release",
+//         date: "Saturday, September 14, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Ya Khal Album Release",
+//         date: "Thursday, October 17, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/Kafr El-Dauwar Records.jpg"
+//     },
+//     {
+//         title: "Fuzzylittlebrain Album Release",
+//         date: "Friday, November 15, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "HIZZ Detroit Black Friday Grand Opening",
+//         date: "Friday, November 29, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/HIZZ Detroit Black Friday Grand Opening.jpg"
+//     },
+//     {
+//         title: "JessicaSligter + OwenGardner LIVE",
+//         date: "Friday, November 29, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/JessicaSligter + OwenGardner LIVE.jpg"
+//     },
+//     {
+//         title: "TAKH Album Release",
+//         date: "Thursday, December 5, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Slovvdk سلوديكاي",
+//         date: "Friday, December 13, 2019",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/slovvdk.jpg"
+//     },
+//     {
+//         title: "MauriceLouca + MaxtonFort",
+//         date: "Friday, January 10, 2020",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/MAURICEMAXTON.jpg"
+//     },
+//     {
+//         title: "amélie legrand ft Alan Bishop + mmmalak",
+//         date: "Friday, January 10, 2020",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/amélie legrand.jpg"
+//     },
+//     {
+//         title: "FredericOberland + GregoryDargent + guests",
+//         date: "Thursday, January 16, 2020",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/FREDERIC.jpg"
+//     },
+//     {
+//         title: "TURQUOISE DESERT RESEARCH PROGRAMME PRESENTATIONS + AFTERPARTY",
+//         date: "Monday, January 20, 2020",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/TURQUOISE DESERT RESEARCH PROGRAMME PRESENTATIONS + AFTERPARTY.jpg"
+//     },
+//     {
+//         title: "Juliana Huxtable X Nadah El Shazly X KZLK",
+//         date: "Tuesday, January 21, 2020",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/XXXXXXXXXXXX.jpg"
+//     },
+//     {
+//         title: "Kid Fourteen + Prof.k",
+//         date: "Friday, January 24, 2020",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/KID FOURTEEN.jpg"
+//     },
+//     {
+//         title: "الشُك",
+//         date: "Saturday, February 15, 2020",
+//         location: "HIZZ, Cairo",
+//         poster: "assets/imgs/events/shk.jpg"
+//     },
+//     {
+//         title: "25 Maadi",
+//         date: "Friday, February 25, 2022",
+//         location: "Maadi, Cairo",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Abosahar at CJC Cairo",
+//         date: "Saturday, July 20, 2024",
+//         location: "Cairo Jazz Club (CJC), Cairo, Egypt",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "HIZZ Tour: Yverdon",
+//         date: "Saturday, August 10, 2024",
+//         location: "Festival Le Castrum, Yverdon, Switzerland",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "HIZZ Tour: Montpellier",
+//         date: "Monday, August 12, 2024",
+//         location: "Montpellier, France",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "HIZZ Tour: Toulouse",
+//         date: "Tuesday, August 13, 2024",
+//         location: "Troisième Loutre, Toulouse",
+//         poster: "assets/imgs/events/"
+//     },
+//     {
+//         title: "HIZZ Tour: Pau",
+//         date: "Wednesday, August 14, 2024",
+//         location: "Galaxie 23 x Live, Pau, France",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "HIZZ Tour: Geneva",
+//         date: "Friday, August 16, 2024",
+//         location: "Théâtre de l’Orangerie, Geneva, Switzerland",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Abosahar at Chilloposite Festival",
+//         date: "Saturday, October 5, 2024",
+//         location: "Dahab, EG",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "HIZZ Tour: Rotterdam",
+//         date: "Friday, October 11, 2024",
+//         location: "Radicalisms Festival, Rotterdam, Netherlands",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "HIZZ",
+//         date: "Thursday, October 17, 2024",
+//         location: "La Chaux d’Ouvron, Geneva, Switzerland",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "HIZZ Tour: Lyon",
+//         date: "Friday, October 18, 2024",
+//         location: "Sonic 10, Lyon, France",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "HIZZ Tour: Amsterdam",
+//         date: "Saturday, October 19, 2024",
+//         location: "Garage Noord, Amsterdam, Netherlands",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Abosahar at CJC",
+//         date: "Saturday, October 26, 2024",
+//         location: "Cairo Jazz Club (CJC), Cairo, Egypt",
+//         poster: "assets/imgs/events"
+//     },
+//     {
+//         title: "Abosahar at CJC Cairo",
+//         date: "Saturday, December 21, 2024",
+//         location: "Cairo Jazz Club (CJC), Cairo, Egypt",
+//         poster: "assets/imgs/events"
+//     }
+// ];
+
 let events = [
+    {
+        title: "House Openning",
+        date: "Wednesday, September 19, 2017",
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/House Openning Poster.jpg"
+    },
     {
         title: "Khaleet 001 / خليط ٠٠١",
         date: "Wednesday, December 13, 2017",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/44.jpg" // Assigned from existing
     },
     {
         title: "Khaleet 002 / خليط ٠٠٢",
         date: "Friday, December 29, 2017",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/Weight of the Heart  Bana Kabalan.jpg" // Assigned from existing
     },
     {
         title: "Khaleet 003 / خليط ٠٠٣",
         date: "Saturday, January 13, 2018",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/Shake and Destroy  DJ Haram x Drummer B x Bashar Suleiman.jpg" // Assigned from existing
     },
     {
         title: "Thursday Night Beat Down feat. R A G E H",
         date: "Thursday, January 18, 2018",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/BEATDOWN.jpg"
     },
     {
         title: "Khaleet 004 / خليط ٠٠٤",
         date: "Friday, January 26, 2018",
-        location: "Uncle Sam Pub, Amman"
+        location: "Uncle Sam Pub, Amman",
+        poster: "assets/imgs/events/Record Store Day OPEN HOUSE.jpg" // Assigned from existing
     },
     {
         title: "Drummer B x ONSY x Bashar Suleiman",
         date: "Wednesday, March 14, 2018",
-        location: "Zigzag, Cairo"
+        location: "Zigzag, Cairo",
+        poster: "assets/imgs/events/Open House.jpg" // Assigned from existing
     },
     {
         title: "Khaleet 005 / خليط ٠٠٥",
         date: "Wednesday, April 25, 2018",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/hizz open house.jpg" // Assigned from existing
     },
     {
         title: "Khaleet 006 / خليط ٠٠٦",
         date: "Sunday, May 27, 2018",
-        location: "Kiesling, Detroit"
+        location: "Kiesling, Detroit",
+        poster: "assets/imgs/events/Kafr El-Dauwar Records.jpg" // Assigned from existing
     },
     {
         title: "Livestream w Youssef Abouzeid X Bashar Suleiman X Torkhy",
-        date: "Friday, July 20, 2018 @ 7:00PM",
-        location: "HIZZ, Cairo"
+        date: "Friday, July 20, 2018",
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/Livestream.jpg"
     },
     {
         title: "INSIN - Livestream",
         date: "Wednesday, August 8, 2018",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/Freya Edmondes-Livestream.jpg"
     },
     {
         title: "Youssef Abouzeid 'Captain Solo' Release Party",
-        date: "Wednesday, August 29, 2018 @ 7:00PM",
-        location: "Bardo Clubhouse, Maadi"
+        date: "Wednesday, August 29, 2018",
+        location: "Bardo Clubhouse, Maadi",
+        poster: "assets/imgs/events/HIZZ Detroit Black Friday Grand Opening.jpg" // Assigned from existing
     },
     {
         title: "assembli X Hizz present Cairo Invasion",
         date: "Friday, November 16, 2018",
-        location: "MENA Tyche Hotel, Amman"
+        location: "MENA Tyche Hotel, Amman",
+        poster: "assets/imgs/events/JessicaSligter + OwenGardner LIVE.jpg" // Assigned from existing
     },
     {
         title: "IV IV أربعة أربعة",
         date: "Sunday, February 3, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/44.jpg"
     },
     {
         title: "Weight of the Heart :: Bana Kabalan",
         date: "Thursday, March 21, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/Weight of the Heart  Bana Kabalan.jpg"
     },
     {
         title: "Shake and Destroy :: DJ Haram x Drummer B x Bashar Suleiman",
         date: "Thursday, March 28, 2019",
-        location: "Unicorn Garden, Cairo"
+        location: "Unicorn Garden, Cairo",
+        poster: "assets/imgs/events/Shake and Destroy  DJ Haram x Drummer B x Bashar Suleiman.jpg"
     },
     {
         title: "Record Store Day OPEN HOUSE",
         date: "Saturday, April 13, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/Record Store Day OPEN HOUSE.jpg"
     },
     {
         title: "Open House",
         date: "Saturday, July 27, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/Open House.jpg"
     },
     {
         title: "Kafr El-Dauwar Records X HIZZ (Open House)",
         date: "Saturday, August 10, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/hizz open house.jpg"
     },
     {
         title: "J!N Album Release",
         date: "Saturday, September 14, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/slovvdk.jpg" // Assigned from existing
     },
     {
         title: "Ya Khal Album Release",
         date: "Thursday, October 17, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/Kafr El-Dauwar Records.jpg"
     },
     {
         title: "Fuzzylittlebrain Album Release",
         date: "Friday, November 15, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/MAURICEMAXTON.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Detroit Black Friday Grand Opening",
         date: "Friday, November 29, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/HIZZ Detroit Black Friday Grand Opening.jpg"
     },
     {
         title: "JessicaSligter + OwenGardner LIVE",
         date: "Friday, November 29, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/JessicaSligter + OwenGardner LIVE.jpg"
     },
     {
         title: "TAKH Album Release",
         date: "Thursday, December 5, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/amélie legrand.jpg" // Assigned from existing
     },
     {
         title: "Slovvdk سلوديكاي",
         date: "Friday, December 13, 2019",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/slovvdk.jpg"
     },
     {
         title: "MauriceLouca + MaxtonFort",
         date: "Friday, January 10, 2020",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/MAURICEMAXTON.jpg"
     },
     {
         title: "amélie legrand ft Alan Bishop + mmmalak",
         date: "Friday, January 10, 2020",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/amélie legrand.jpg"
     },
     {
         title: "FredericOberland + GregoryDargent + guests",
         date: "Thursday, January 16, 2020",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/FREDERIC.jpg"
     },
     {
         title: "TURQUOISE DESERT RESEARCH PROGRAMME PRESENTATIONS + AFTERPARTY",
         date: "Monday, January 20, 2020",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/TURQUOISE DESERT RESEARCH PROGRAMME PRESENTATIONS + AFTERPARTY.jpg"
     },
     {
         title: "Juliana Huxtable X Nadah El Shazly X KZLK",
         date: "Tuesday, January 21, 2020",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/XXXXXXXXXXXX.jpg"
     },
     {
         title: "Kid Fourteen + Prof.k",
         date: "Friday, January 24, 2020",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/KID FOURTEEN.jpg"
     },
     {
         title: "الشُك",
         date: "Saturday, February 15, 2020",
-        location: "HIZZ, Cairo"
+        location: "HIZZ, Cairo",
+        poster: "assets/imgs/events/shk.jpg"
     },
     {
         title: "25 Maadi",
         date: "Friday, February 25, 2022",
-        location: "Maadi, Cairo"
+        location: "Maadi, Cairo",
+        poster: "assets/imgs/events/Weight of the Heart  Bana Kabalan.jpg" // Assigned from existing
     },
     {
         title: "Abosahar at CJC Cairo",
         date: "Saturday, July 20, 2024",
-        location: "Cairo Jazz Club (CJC), Cairo, Egypt"
+        location: "Cairo Jazz Club (CJC), Cairo, Egypt",
+        poster: "assets/imgs/events/Shake and Destroy  DJ Haram x Drummer B x Bashar Suleiman.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Yverdon",
         date: "Saturday, August 10, 2024",
-        location: "Festival Le Castrum, Yverdon, Switzerland"
+        location: "Festival Le Castrum, Yverdon, Switzerland",
+        poster: "assets/imgs/events/Record Store Day OPEN HOUSE.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Montpellier",
         date: "Monday, August 12, 2024",
-        location: "Montpellier, France"
+        location: "Montpellier, France",
+        poster: "assets/imgs/events/Open House.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Toulouse",
         date: "Tuesday, August 13, 2024",
-        location: "Troisième Loutre, Toulouse"
+        location: "Troisième Loutre, Toulouse",
+        poster: "assets/imgs/events/hizz open house.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Pau",
         date: "Wednesday, August 14, 2024",
-        location: "Galaxie 23 x Live, Pau, France"
+        location: "Galaxie 23 x Live, Pau, France",
+        poster: "assets/imgs/events/Kafr El-Dauwar Records.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Geneva",
         date: "Friday, August 16, 2024",
-        location: "Théâtre de l’Orangerie, Geneva, Switzerland"
+        location: "Théâtre de l’Orangerie, Geneva, Switzerland",
+        poster: "assets/imgs/events/JessicaSligter + OwenGardner LIVE.jpg" // Assigned from existing
     },
     {
         title: "Abosahar at Chilloposite Festival",
         date: "Saturday, October 5, 2024",
-        location: "Dahab, EG"
+        location: "Dahab, EG",
+        poster: "assets/imgs/events/amélie legrand.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Rotterdam",
         date: "Friday, October 11, 2024",
-        location: "Radicalisms Festival, Rotterdam, Netherlands"
+        location: "Radicalisms Festival, Rotterdam, Netherlands",
+        poster: "assets/imgs/events/MAURICEMAXTON.jpg" // Assigned from existing
     },
     {
         title: "HIZZ",
         date: "Thursday, October 17, 2024",
-        location: "La Chaux d’Ouvron, Geneva, Switzerland"
+        location: "La Chaux d’Ouvron, Geneva, Switzerland",
+        poster: "assets/imgs/events/slovvdk.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Lyon",
         date: "Friday, October 18, 2024",
-        location: "Sonic 10, Lyon, France"
+        location: "Sonic 10, Lyon, France",
+        poster: "assets/imgs/events/FREDERIC.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Amsterdam",
         date: "Saturday, October 19, 2024",
-        location: "Garage Noord, Amsterdam, Netherlands"
+        location: "Garage Noord, Amsterdam, Netherlands",
+        poster: "assets/imgs/events/TURQUOISE DESERT RESEARCH PROGRAMME PRESENTATIONS + AFTERPARTY.jpg" // Assigned from existing
     },
     {
         title: "Abosahar at CJC",
         date: "Saturday, October 26, 2024",
-        location: "Cairo Jazz Club (CJC), Cairo, Egypt"
+        location: "Cairo Jazz Club (CJC), Cairo, Egypt",
+        poster: "assets/imgs/events/KID FOURTEEN.jpg" // Assigned from existing
     },
     {
         title: "Abosahar at CJC Cairo",
         date: "Saturday, December 21, 2024",
-        location: "Cairo Jazz Club (CJC), Cairo, Egypt"
+        location: "Cairo Jazz Club (CJC), Cairo, Egypt",
+        poster: "assets/imgs/events/shk.jpg" // Assigned from existing
     }
 ];
 
+document.addEventListener("DOMContentLoaded", function () {
+    function sendEmail(formId, templateId) {
+        const form = document.getElementById(formId);
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_dw3zi98", templateId, form, "xRYmkU_4Ct1duYCBt")
+                .then(() => {
+                    window.location.href = "thankyou.html";
+                })
+                .catch((error) => {
+                    console.error("EmailJS Error:", error);
+                    alert("Something went wrong. Please try again.");
+                });
+        });
+    }
+    emailjs.init("xRYmkU_4Ct1duYCBt");
+    sendEmail("contactUs", "template_1f7seqq");
+    sendEmail("demos", "template_46hwo0c");
+});
+
+
+
+function reformatDate(dateString) {
+    const date = new Date(dateString);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+}
+
+events.forEach((event, index) => {
+    event.id = index + 1
+    event.date = reformatDate(event.date);
+})
+
+events = events.reverse()
 
 let albumsContiner = document.querySelector(".albums");
 let eventsContiner = document.querySelector(".events");
@@ -420,18 +793,44 @@ let eventsContiner = document.querySelector(".events");
 let eventsHTML = ``;
 events.forEach((event, index) => {
     eventsHTML += `
-    <div class="event" id="event${index}">
+    <div class="event" id="event${event.id}" data-id="${event.id}">
         <span class="eventDate">${event.date}</span>
         <span class="eventTitle">${event.title}</span>
         <span class="eventLocation">${event.location}</span>
     </div>`
 })
 if (eventsContiner) {
-    eventsContiner.innerHTML = eventsHTML
+    eventsContiner.innerHTML += eventsHTML
 }
 
+let eventElements = document.querySelectorAll(".event");
+let posterElement = document.querySelector("#poster");
 
+document.addEventListener("mousemove", (event) => {
+    posterElement.style.left = `${event.clientX + 10}px`;
 
+    let posterHeight = parseFloat(window.getComputedStyle(posterElement).height);
+    if (event.clientY > window.innerHeight * 0.5) {
+        posterElement.style.top = `${event.clientY - posterHeight}px`;
+    } else {
+        posterElement.style.top = `${event.clientY + 10}px`;
+    }
+});
+
+eventElements.forEach(eventElement => {
+    eventElement.addEventListener("mouseover", () => {
+        let eventId = eventElement.dataset.id;
+        let selectedEvent = events.find(event => event.id === Number(eventId));
+        if (selectedEvent) {
+            posterElement.src = selectedEvent.poster;
+            posterElement.style.visibility = "visible";
+        }
+    });
+
+    eventElement.addEventListener("mouseleave", () => {
+        posterElement.style.visibility = "hidden";
+    });
+});
 
 
 
@@ -447,7 +846,9 @@ albums.forEach(album => {
                     </a>`
 })
 
-albumsContiner.innerHTML = albumsHTML
+if (albumsContiner) {
+    albumsContiner.innerHTML = albumsHTML
+}
 
 let subPageLinks = document.querySelectorAll(".subPageLink");
 let linkLines = document.querySelectorAll(".linkLine");
@@ -468,3 +869,5 @@ subPageLinks.forEach((link, index) => {
 //     linksArray.push(a.href)
 // })
 // console.log(linksArray);
+
+

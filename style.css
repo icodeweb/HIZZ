@@ -95,17 +95,11 @@ nav a {
     text-decoration: none;
 }
 
-/* events
-event
-eventDate
-eventTitle
-eventLocation */
-
 .events {
     color: white;
     display: flex;
-    flex-direction: column-reverse;
-    gap: 10px;
+    flex-direction: column;
+    /* gap: 10px; */
     width: 100%;
     padding: 5% 0% 0% 30%;
     width: 90%;
@@ -115,8 +109,24 @@ eventLocation */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     border-bottom: 1px solid rgb(61, 61, 61);
-    padding: 5px 0px;
+    padding: 10px 0px;
+}
+
+.eventsHead {
+    display: flex;
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    border-bottom: 1px solid rgb(61, 61, 61);
+    padding: 10px 0px;
+}
+
+.eventsHead span {
+    width: calc(100%/3);
+    text-align: center;
+    font-weight: 600;
 }
 
 .eventDate,
@@ -124,11 +134,21 @@ eventLocation */
 .eventLocation {
     max-width: calc(100%/3);
     width: calc(100%/3);
-    /* text-wrap: nowrap; */
+
     text-align: left;
-    /* overflow: hidden; */
+
+    cursor: default;
 }
 
 .eventLocation {
     text-align: right;
+}
+
+#poster {
+    /* transition: all 0.1s; */
+    animation: ease-in-out;
+    max-width: 350px;
+    position: fixed;
+    opacity: .8;
+    visibility: hidden;
 }

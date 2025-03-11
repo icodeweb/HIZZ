@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIZZ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        p {
+            color: white;
+            width: 800px;
+            position: absolute;
+            top: 500px;
+            left: 400px;
+        }
+
+        body {
+            color: white;
+        }
+
+        form {
+            position: absolute;
+            top: 500px;
+            left: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pageContainer">
+        <img class="logo" src="/assets/imgs/logo.png" alt="logo">
+        <nav>
+            <a href="index.html" class="subPageLink">
+                <span class="linkLine">|</span>
+                <span>Home</span>
+            </a>
+            <a href="events.html" class="subPageLink">
+                <span class="linkLine">|</span>
+                <span>Events</span>
+            </a>
+            <a href="gallery.html" class="subPageLink">
+                <span class="linkLine">|</span>
+                <span>Gallery</span></a>
+            <a href="about.html" class="subPageLink">
+                <span class="linkLine">|</span>
+                <span>About</span></a>
+        </nav>
+        <section class="About">
+            <!-- <p>HIZZ is a CAIRO based record label, artists residency and record store founded in 2017 by Abass Elhage
+                and Adam Shaalan with the aim of promoting avant garde art and music in the arab world and diaspora.
+            </p> -->
+
+            <form id="contactUs">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+
+            <form id="demos">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="text" name="artist_name" placeholder="Artist Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <input type="text" name="location" placeholder="Location" required />
+                <input type="url" name="stream_link" placeholder="Stream Link" required />
+                <input type="text" name="genre" placeholder="What Genre Do You Classify Your Music As?" required />
+                <button type="submit">Send</button>
+            </form>
+
+
+        </section>
+    </div>
+    <img src="/assets/imgs/logo.png" alt="poster" id="poster">
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
