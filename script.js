@@ -415,6 +415,25 @@ let events = [
 
 
 let albumsContiner = document.querySelector(".albums");
+let eventsContiner = document.querySelector(".events");
+
+let eventsHTML = ``;
+events.forEach((event, index) => {
+    eventsHTML += `
+    <div class="event" id="event${index}">
+        <span class="eventDate">${event.date}</span>
+        <span class="eventTitle">${event.title}</span>
+        <span class="eventLocation">${event.location}</span>
+    </div>`
+})
+if (eventsContiner) {
+    eventsContiner.innerHTML = eventsHTML
+}
+
+
+
+
+
 
 let albumsHTML = ``;
 albums.forEach(album => {
@@ -430,7 +449,18 @@ albums.forEach(album => {
 
 albumsContiner.innerHTML = albumsHTML
 
-
+let subPageLinks = document.querySelectorAll(".subPageLink");
+let linkLines = document.querySelectorAll(".linkLine");
+subPageLinks.forEach((link, index) => {
+    link.addEventListener("mouseover", () => {
+        linkLines[index].innerText = "/"
+    })
+})
+subPageLinks.forEach((link, index) => {
+    link.addEventListener("mouseout", () => {
+        linkLines[index].innerText = "|"
+    })
+})
 
 // let linksArray = [];
 // let links = document.querySelectorAll("a");

@@ -17,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    padding: 3rem;
 }
 
 .albums {
@@ -26,7 +27,6 @@ body {
     flex-direction: row-reverse;
     gap: 7rem;
     justify-content: left;
-    align-items: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -60,4 +60,75 @@ a:visited {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    /* filter: drop-shadow(0px 0px 4px #222); */
+}
+
+.logo {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 700px;
+    filter: invert(1);
+    pointer-events: none;
+}
+
+.shadow {
+    width: 600px;
+    /* -webkit-filter: drop-shadow(5px 5px 5px #222); */
+    /* filter: drop-shadow(5px 5px 5px #222); */
+    position: relative;
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/* events
+event
+eventDate
+eventTitle
+eventLocation */
+
+.events {
+    color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 100%;
+    padding: 5% 0% 0% 30%;
+    width: 90%;
+}
+
+.event {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgb(61, 61, 61);
+    padding: 5px 0px;
+}
+
+.eventDate,
+.eventTitle,
+.eventLocation {
+    max-width: calc(100%/3);
+    width: calc(100%/3);
+    /* text-wrap: nowrap; */
+    text-align: left;
+    /* overflow: hidden; */
+}
+
+.eventLocation {
+    text-align: right;
 }
