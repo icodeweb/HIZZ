@@ -1,187 +1,19 @@
-let albums = [
-    {
-        id: 1,
-        title: "Inside the Blue",
-        artist: "RAGEH",
-        link: "https://hizzme.bandcamp.com/album/inside-the-blue"
-    },
-    {
-        id: 2,
-        title: "Shway Trooby",
-        artist: "ABOsahar",
-        link: "https://hizzme.bandcamp.com/album/shway-trooby"
-    },
-    {
-        id: 3,
-        title: "Pink Tape",
-        artist: "Bashar Suliman X Drummer B",
-        link: "https://hizzme.bandcamp.com/album/pink-tape"
-    },
-    {
-        id: 4,
-        title: "captain solo",
-        artist: "youssef abouzeid",
-        link: "https://hizzme.bandcamp.com/album/captain-solo"
-    },
-    {
-        id: 5,
-        title: "Throwbacks",
-        artist: "Bashar Suleiman",
-        link: "https://hizzme.bandcamp.com/album/throwbacks"
-    },
-    {
-        id: 6,
-        title: "KOMBILE 001",
-        artist: "HIZZ",
-        link: "https://hizzme.bandcamp.com/album/kombile-001"
-    },
-    {
-        id: 7,
-        title: "LSTEFA",
-        artist: "KZLK",
-        link: "https://hizzme.bandcamp.com/album/lstefa"
-    },
-    {
-        id: 8,
-        title: "SADSUN",
-        artist: "INSIN",
-        link: "https://hizzme.bandcamp.com/album/sadsun"
-    },
-    {
-        id: 9,
-        title: "∞σ",
-        artist: "DG Hadi",
-        link: "https://hizzme.bandcamp.com/album/-"
-    },
-    {
-        id: 10,
-        title: "The Caveman",
-        artist: "ABOsahar",
-        link: "https://hizzme.bandcamp.com/album/the-caveman"
-    },
-    {
-        id: 11,
-        title: "pink stm & wite ptl",
-        artist: "J!N",
-        link: "https://hizzme.bandcamp.com/album/pink-stm-wite-ptl-2"
-    },
-    {
-        id: 12,
-        title: "KOMBILE 002",
-        artist: "HIZZ",
-        link: "https://hizzme.bandcamp.com/album/kombile-002"
-    },
-    {
-        id: 13,
-        title: "fuzzylittlebrain",
-        artist: "fuzzylittlebrain",
-        link: "https://hizzme.bandcamp.com/album/fuzzylittlebrain"
-    },
-    {
-        id: 14,
-        title: "aho",
-        artist: "youssef abouzeid",
-        link: "https://hizzme.bandcamp.com/album/aho"
-    },
-    {
-        id: 15,
-        title: "Foreigner",
-        artist: "JIN",
-        link: "https://hizzme.bandcamp.com/album/foreigner"
-    },
-    {
-        id: 16,
-        title: "Attraction",
-        artist: "DAHB",
-        link: "https://hizzme.bandcamp.com/album/attraction"
-    },
-    {
-        id: 17,
-        title: "Anterior",
-        artist: "Timmy Mowafi",
-        link: "https://hizzme.bandcamp.com/album/anterior"
-    },
-    {
-        id: 18,
-        title: "BAD SECTOR",
-        artist: "[machine.condition]",
-        link: "https://hizzme.bandcamp.com/album/bad-sector"
-    },
-    {
-        id: 19,
-        title: "Entity",
-        artist: "Gast",
-        link: "https://hizzme.bandcamp.com/album/entity"
-    },
-    {
-        id: 20,
-        title: "Shuttle Juice",
-        artist: "Hebatallah",
-        link: "https://hizzme.bandcamp.com/album/shuttle-juice"
-    },
-    {
-        id: 21,
-        title: "Ma2ali",
-        artist: "ARRAKK",
-        link: "https://hizzme.bandcamp.com/album/ma2ali"
-    },
-    {
-        id: 22,
-        title: "many sins, mini synths",
-        artist: "Centum/ˈsɛntəm/",
-        link: "https://hizzme.bandcamp.com/album/many-sins-mini-synths"
-    },
-    {
-        id: 23,
-        title: "Mechanical Love",
-        artist: "J!N",
-        link: "https://hizzme.bandcamp.com/album/mechanical-love"
-    },
-    {
-        id: 24,
-        title: "Electric*té Du Liban",
-        artist: "Baytee Baytak",
-        link: "https://hizzme.bandcamp.com/album/electric-t-du-liban"
-    },
-    {
-        id: 25,
-        title: "MoultingKICK_23652",
-        artist: "Centum/ˈsɛntəm/",
-        link: "https://hizzme.bandcamp.com/album/moultingkick-23652"
-    },
-    {
-        id: 26,
-        title: "KOMBILE 003",
-        artist: "HIZZ",
-        link: "https://hizzme.bandcamp.com/album/kombile-003"
-    },
-    {
-        id: 27,
-        title: "تلاته",
-        artist: "Lotfy",
-        link: "https://hizzme.bandcamp.com/album/--2"
-    },
-    {
-        id: 28,
-        title: "bb",
-        artist: "DG Hadi",
-        link: "https://hizzme.bandcamp.com/album/bb"
-    },
-    {
-        id: 29,
-        title: "TassTooz",
-        artist: "Baytee Baytak",
-        link: "https://hizzme.bandcamp.com/album/tasstooz"
-    },
-    {
-        id: 30,
-        title: "باندا",
-        artist: "سته ستميه باند",
-        link: "https://hizzme.bandcamp.com/album/--4"
-    }
-];
+// general // general // general // general
+let subPageLinks = document.querySelectorAll(".subPageLink");
+let linkLines = document.querySelectorAll(".linkLine");
+subPageLinks.forEach((link, index) => {
+    link.addEventListener("mouseover", () => {
+        linkLines[index].innerText = "/"
+    })
+})
+subPageLinks.forEach((link, index) => {
+    link.addEventListener("mouseout", () => {
+        linkLines[index].innerText = "|"
+    })
+})
 
-// let events = [
+// events // events // events // events
+//let events = [
 //     {
 //         title: "House Openning",
 //         date: "Wednesday, September 19, 2017",
@@ -750,124 +582,257 @@ let events = [
         poster: "assets/imgs/events/shk.jpg" // Assigned from existing
     }
 ];
-
-document.addEventListener("DOMContentLoaded", function () {
-    function sendEmail(formId, templateId) {
-        const form = document.getElementById(formId);
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            emailjs.sendForm("service_dw3zi98", templateId, form, "xRYmkU_4Ct1duYCBt")
-                .then(() => {
-                    window.location.href = "thankyou.html";
-                })
-                .catch((error) => {
-                    console.error("EmailJS Error:", error);
-                    alert("Something went wrong. Please try again.");
-                });
-        });
-    }
-    emailjs.init("xRYmkU_4Ct1duYCBt");
-    sendEmail("contactUs", "template_1f7seqq");
-    sendEmail("demos", "template_46hwo0c");
-});
-
-
-
 function reformatDate(dateString) {
     const date = new Date(dateString);
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return date.toLocaleDateString('en-US', options);
 }
 
-events.forEach((event, index) => {
-    event.id = index + 1
-    event.date = reformatDate(event.date);
-})
-
-events = events.reverse()
-
-let albumsContiner = document.querySelector(".albums");
 let eventsContiner = document.querySelector(".events");
+if (eventsContiner) {
+    events.forEach((event, index) => {
+        event.id = index + 1
+        event.date = reformatDate(event.date);
+    })
+    events = events.reverse()
 
-let eventsHTML = ``;
-events.forEach((event, index) => {
-    eventsHTML += `
+    let eventsHTML = ``;
+    events.forEach((event, index) => {
+        eventsHTML += `
     <div class="event" id="event${event.id}" data-id="${event.id}">
         <span class="eventDate">${event.date}</span>
         <span class="eventTitle">${event.title}</span>
         <span class="eventLocation">${event.location}</span>
     </div>`
-})
-if (eventsContiner) {
+    })
     eventsContiner.innerHTML += eventsHTML
-}
 
-let eventElements = document.querySelectorAll(".event");
-let posterElement = document.querySelector("#poster");
+    let eventElements = document.querySelectorAll(".event");
+    let posterElement = document.querySelector("#poster");
 
-document.addEventListener("mousemove", (event) => {
-    posterElement.style.left = `${event.clientX + 10}px`;
+    document.addEventListener("mousemove", (event) => {
+        posterElement.style.left = `${event.clientX + 10}px`;
 
-    let posterHeight = parseFloat(window.getComputedStyle(posterElement).height);
-    if (event.clientY > window.innerHeight * 0.5) {
-        posterElement.style.top = `${event.clientY - posterHeight}px`;
-    } else {
-        posterElement.style.top = `${event.clientY + 10}px`;
-    }
-});
-
-eventElements.forEach(eventElement => {
-    eventElement.addEventListener("mouseover", () => {
-        let eventId = eventElement.dataset.id;
-        let selectedEvent = events.find(event => event.id === Number(eventId));
-        if (selectedEvent) {
-            posterElement.src = selectedEvent.poster;
-            posterElement.style.visibility = "visible";
+        let posterHeight = parseFloat(window.getComputedStyle(posterElement).height);
+        if (event.clientY > window.innerHeight * 0.5) {
+            posterElement.style.top = `${event.clientY - posterHeight}px`;
+        } else {
+            posterElement.style.top = `${event.clientY + 10}px`;
         }
     });
 
-    eventElement.addEventListener("mouseleave", () => {
-        posterElement.style.visibility = "hidden";
+    eventElements.forEach(eventElement => {
+        eventElement.addEventListener("mouseover", () => {
+            let eventId = eventElement.dataset.id;
+            let selectedEvent = events.find(event => event.id === Number(eventId));
+            if (selectedEvent) {
+                posterElement.src = selectedEvent.poster;
+                posterElement.style.visibility = "visible";
+            }
+        });
+
+        eventElement.addEventListener("mouseleave", () => {
+            posterElement.style.visibility = "hidden";
+        });
     });
-});
-
-
-
-let albumsHTML = ``;
-albums.forEach(album => {
-    albumsHTML += `
-                <a class="album" id="album${album.id}" href="${album.link}">
-                    <img src="/assets/imgs/albumcovers/${album.title}.webp" alt="${album.title}">
-                    <div class="albumInfo">
-                    <span class="albumTitle">${album.title}</span>
-                    <span class="albumArtist">${album.artist}</span>
-                    </div>
-                    </a>`
-})
-
-if (albumsContiner) {
-    albumsContiner.innerHTML = albumsHTML
 }
 
-let subPageLinks = document.querySelectorAll(".subPageLink");
-let linkLines = document.querySelectorAll(".linkLine");
-subPageLinks.forEach((link, index) => {
-    link.addEventListener("mouseover", () => {
-        linkLines[index].innerText = "/"
+// albums // albums // albums // albums
+let albums = [
+    {
+        id: 1,
+        title: "Inside the Blue",
+        artist: "RAGEH",
+        link: "https://hizzme.bandcamp.com/album/inside-the-blue"
+    },
+    {
+        id: 2,
+        title: "Shway Trooby",
+        artist: "ABOsahar",
+        link: "https://hizzme.bandcamp.com/album/shway-trooby"
+    },
+    {
+        id: 3,
+        title: "Pink Tape",
+        artist: "Bashar Suliman X Drummer B",
+        link: "https://hizzme.bandcamp.com/album/pink-tape"
+    },
+    {
+        id: 4,
+        title: "captain solo",
+        artist: "youssef abouzeid",
+        link: "https://hizzme.bandcamp.com/album/captain-solo"
+    },
+    {
+        id: 5,
+        title: "Throwbacks",
+        artist: "Bashar Suleiman",
+        link: "https://hizzme.bandcamp.com/album/throwbacks"
+    },
+    {
+        id: 6,
+        title: "KOMBILE 001",
+        artist: "HIZZ",
+        link: "https://hizzme.bandcamp.com/album/kombile-001"
+    },
+    {
+        id: 7,
+        title: "LSTEFA",
+        artist: "KZLK",
+        link: "https://hizzme.bandcamp.com/album/lstefa"
+    },
+    {
+        id: 8,
+        title: "SADSUN",
+        artist: "INSIN",
+        link: "https://hizzme.bandcamp.com/album/sadsun"
+    },
+    {
+        id: 9,
+        title: "∞σ",
+        artist: "DG Hadi",
+        link: "https://hizzme.bandcamp.com/album/-"
+    },
+    {
+        id: 10,
+        title: "The Caveman",
+        artist: "ABOsahar",
+        link: "https://hizzme.bandcamp.com/album/the-caveman"
+    },
+    {
+        id: 11,
+        title: "pink stm & wite ptl",
+        artist: "J!N",
+        link: "https://hizzme.bandcamp.com/album/pink-stm-wite-ptl-2"
+    },
+    {
+        id: 12,
+        title: "KOMBILE 002",
+        artist: "HIZZ",
+        link: "https://hizzme.bandcamp.com/album/kombile-002"
+    },
+    {
+        id: 13,
+        title: "fuzzylittlebrain",
+        artist: "fuzzylittlebrain",
+        link: "https://hizzme.bandcamp.com/album/fuzzylittlebrain"
+    },
+    {
+        id: 14,
+        title: "aho",
+        artist: "youssef abouzeid",
+        link: "https://hizzme.bandcamp.com/album/aho"
+    },
+    {
+        id: 15,
+        title: "Foreigner",
+        artist: "JIN",
+        link: "https://hizzme.bandcamp.com/album/foreigner"
+    },
+    {
+        id: 16,
+        title: "Attraction",
+        artist: "DAHB",
+        link: "https://hizzme.bandcamp.com/album/attraction"
+    },
+    {
+        id: 17,
+        title: "Anterior",
+        artist: "Timmy Mowafi",
+        link: "https://hizzme.bandcamp.com/album/anterior"
+    },
+    {
+        id: 18,
+        title: "BAD SECTOR",
+        artist: "[machine.condition]",
+        link: "https://hizzme.bandcamp.com/album/bad-sector"
+    },
+    {
+        id: 19,
+        title: "Entity",
+        artist: "Gast",
+        link: "https://hizzme.bandcamp.com/album/entity"
+    },
+    {
+        id: 20,
+        title: "Shuttle Juice",
+        artist: "Hebatallah",
+        link: "https://hizzme.bandcamp.com/album/shuttle-juice"
+    },
+    {
+        id: 21,
+        title: "Ma2ali",
+        artist: "ARRAKK",
+        link: "https://hizzme.bandcamp.com/album/ma2ali"
+    },
+    {
+        id: 22,
+        title: "many sins, mini synths",
+        artist: "Centum/ˈsɛntəm/",
+        link: "https://hizzme.bandcamp.com/album/many-sins-mini-synths"
+    },
+    {
+        id: 23,
+        title: "Mechanical Love",
+        artist: "J!N",
+        link: "https://hizzme.bandcamp.com/album/mechanical-love"
+    },
+    {
+        id: 24,
+        title: "Electric*té Du Liban",
+        artist: "Baytee Baytak",
+        link: "https://hizzme.bandcamp.com/album/electric-t-du-liban"
+    },
+    {
+        id: 25,
+        title: "MoultingKICK_23652",
+        artist: "Centum/ˈsɛntəm/",
+        link: "https://hizzme.bandcamp.com/album/moultingkick-23652"
+    },
+    {
+        id: 26,
+        title: "KOMBILE 003",
+        artist: "HIZZ",
+        link: "https://hizzme.bandcamp.com/album/kombile-003"
+    },
+    {
+        id: 27,
+        title: "تلاته",
+        artist: "Lotfy",
+        link: "https://hizzme.bandcamp.com/album/--2"
+    },
+    {
+        id: 28,
+        title: "bb",
+        artist: "DG Hadi",
+        link: "https://hizzme.bandcamp.com/album/bb"
+    },
+    {
+        id: 29,
+        title: "TassTooz",
+        artist: "Baytee Baytak",
+        link: "https://hizzme.bandcamp.com/album/tasstooz"
+    },
+    {
+        id: 30,
+        title: "باندا",
+        artist: "سته ستميه باند",
+        link: "https://hizzme.bandcamp.com/album/--4"
+    }
+];
+
+let albumsContiner = document.querySelector(".albums");
+if (albumsContiner) {
+    let albumsHTML = ``;
+    albums.forEach(album => {
+        albumsHTML += `
+                    <a class="album" id="album${album.id}" href="${album.link}">
+                        <img src="assets/imgs/albumcovers/${album.title}.webp" alt="${album.title} cover">
+                        <div class="albumInfo">
+                        <span class="albumTitle">${album.title}</span>
+                        <span class="albumArtist">${album.artist}</span>
+                        </div>
+                        </a>`
     })
-})
-subPageLinks.forEach((link, index) => {
-    link.addEventListener("mouseout", () => {
-        linkLines[index].innerText = "|"
-    })
-})
-
-// let linksArray = [];
-// let links = document.querySelectorAll("a");
-// links.forEach(a => {
-//     linksArray.push(a.href)
-// })
-// console.log(linksArray);
-
-
+    albumsContiner.innerHTML = albumsHTML
+}

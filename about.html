@@ -4,27 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIZZ</title>
+    <title>HIZZ / about</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        p {
-            color: white;
-            width: 800px;
-            position: absolute;
-            top: 500px;
-            left: 400px;
-        }
 
-        body {
-            color: white;
-        }
-
-        form {
-            position: absolute;
-            top: 500px;
-            left: 400px;
-        }
-    </style>
 </head>
 
 <body>
@@ -46,35 +28,29 @@
                 <span class="linkLine">|</span>
                 <span>About</span></a>
         </nav>
+        <div class="links">
+            <a href="https://www.instagram.com/hizz.me"><img src="assets/imgs/links/ig.png"></a>
+            <a href="https://hizzme.bandcamp.com"><img src="assets/imgs/links/bc.png"></a>
+            <a href="https://soundcloud.com/hizzme"><img src="assets/imgs/links/sc.png"></a>
+        </div>
         <section class="About">
-            <!-- <p>HIZZ is a CAIRO based record label, artists residency and record store founded in 2017 by Abass Elhage
-                and Adam Shaalan with the aim of promoting avant garde art and music in the arab world and diaspora.
-            </p> -->
-
-            <form id="contactUs">
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-
-            <form id="demos">
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="text" name="artist_name" placeholder="Artist Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <input type="text" name="location" placeholder="Location" required />
-                <input type="url" name="stream_link" placeholder="Stream Link" required />
-                <input type="text" name="genre" placeholder="What Genre Do You Classify Your Music As?" required />
-                <button type="submit">Send</button>
-            </form>
-
-
+            <span class="titleSpan">About Us</span>
+            <p id="label-info"><big>HIZZ</big> is a CAIRO based record label, artists residency and record store <br>
+                founded in 2017 by Abass Elhage and Adam Shaalan with the aim of promoting <br> avant garde art and
+                music in
+                the arab world and diaspora.
+            </p>
+            <div>
+                <a href="forms.html">contact us & Send us your Demo here!</a><span> // </span><a
+                    href="mailto:rghy@hizz.me">rghy@hizz.me</a>
+            </div>
         </section>
     </div>
+
     <img src="/assets/imgs/logo.png" alt="poster" id="poster">
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 
 </html>

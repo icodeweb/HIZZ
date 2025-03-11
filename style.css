@@ -70,7 +70,7 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     gap: 10px;
-    /* filter: drop-shadow(0px 0px 4px #222); */
+
 }
 
 .logo {
@@ -151,4 +151,87 @@ nav a {
     position: fixed;
     opacity: .8;
     visibility: hidden;
+}
+
+body {
+    color: white;
+}
+
+.About {
+    display: flex;
+    padding-left: 20%;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    gap: 1.5rem;
+}
+
+.thankyou {
+    display: flex;
+    padding-left: 20%;
+    padding-top: 1.5rem;
+}
+
+#label-info {
+    line-height: 20px;
+}
+
+
+
+/* demos section */
+.demos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 30%;
+}
+
+/* contact section */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 30%;
+}
+
+.titleSpan {
+    font-size: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+input,
+textarea,
+button {
+    background-color: black;
+    color: white;
+    border: 0.5px rgb(255, 255, 255) solid;
+    outline: none;
+    padding: 10px 30px;
+
+}
+
+button {
+    cursor: pointer;
+}
+
+.links a img {
+    width: 40px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    position: fixed;
+    right: 20px;
+    padding: 1rem 0px;
+    background-color: black;
+    z-index: 1000;
 }
