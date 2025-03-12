@@ -18,16 +18,3 @@ document.addEventListener("DOMContentLoaded", function () {
     sendEmail("contactUs", "template_1f7seqq");
     sendEmail("demos", "template_46hwo0c");
 });
-
-let subPageLinks = document.querySelectorAll(".subPageLink");
-let linkLines = document.querySelectorAll(".linkLine");
-subPageLinks.forEach((link, index) => {
-    link.addEventListener("mouseover", () => {
-        linkLines[index].innerText = "/"
-    })
-})
-subPageLinks.forEach((link, index) => {
-    link.addEventListener("mouseout", () => {
-        linkLines[index].innerText = "|"
-    })
-})
