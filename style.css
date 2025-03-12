@@ -235,3 +235,12 @@ button {
     background-color: black;
     z-index: 1000;
 }
+
+.gallery {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
