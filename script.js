@@ -347,7 +347,7 @@ if (eventsContiner) {
             let eventId = eventElement.dataset.id;
             let selectedEvent = events.find(event => event.id === Number(eventId));
             if (selectedEvent) {
-                posterElement.src = 'assets/imgs/eventcovers/' + selectedEvent.poster;
+                posterElement.src = '/assets/imgs/eventcovers/' + selectedEvent.poster;
                 posterElement.style.visibility = "visible";
             }
         });
@@ -560,12 +560,13 @@ if (albumsContiner) {
 
 
 // gallery // gallery // gallery // gallery 
-
 let galleryContiner = document.querySelector(".gallery");
-for (let index = 0; index < 68; index++) {
-    let img = document.createElement("img");
-    img.src = `assets/imgs/photos/hizzGlry${index + 1}.jpg`;
-    img.loading = "lazy";
-    img.style.width = "70vw";
-    galleryContiner.appendChild(img);
+if (galleryContiner) {
+    for (let index = 0; index < 68; index++) {
+        let img = document.createElement("img");
+        img.src = `assets/imgs/photos/hizzGlry${index + 1}.jpg`;
+        img.loading = "lazy";
+        img.style.width = "70vw";
+        galleryContiner.appendChild(img);
+    }
 }
