@@ -1,4 +1,3 @@
-// general // general // general // general
 let subPageLinks = document.querySelectorAll(".subPageLink");
 document.addEventListener("DOMContentLoaded", function () {
     let currentPage = window.location.pathname.split("/").pop();
