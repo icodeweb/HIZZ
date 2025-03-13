@@ -346,7 +346,7 @@ if (eventsContiner) {
             let eventId = eventElement.dataset.id;
             let selectedEvent = events.find(event => event.id === Number(eventId));
             if (selectedEvent) {
-                posterElement.src = '/assets/imgs/eventcovers/' + selectedEvent.poster;
+                posterElement.src = 'assets/imgs/eventcovers/' + selectedEvent.poster;
                 posterElement.style.visibility = "visible";
             }
         });
