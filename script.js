@@ -60,13 +60,13 @@ let events = [
         title: "Drummer B x ONSY x Bashar Suleiman",
         date: "Wednesday, March 14, 2018",
         location: "Zigzag, Cairo",
-        poster: "zigzag.gif"
+        poster: "Drummer B x ONSY x Bashar Suleiman.gif"
     },
     {
         title: "Khaleet 005 / خليط ٠٠٥",
         date: "Wednesday, April 25, 2018",
         location: "HIZZ, Cairo",
-        poster: "KHALEET5.jpg"
+        poster: "khalet5.jpg"
     },
     {
         title: "Khaleet 006 / خليط ٠٠٦",
