@@ -27,21 +27,21 @@ let events = [
     },
     {
         title: "Khaleet 001 / خليط ٠٠١",
-        date: "Wednesday, December 13, 2017",
+        date: "Thursday, December 14 2017",
         location: "HIZZ, Cairo",
-        poster: "44.jpg" // Assigned from existing
+        poster: "KHALEET1.jpg"
     },
     {
         title: "Khaleet 002 / خليط ٠٠٢",
         date: "Friday, December 29, 2017",
         location: "HIZZ, Cairo",
-        poster: "Weight of the Heart  Bana Kabalan.jpg" // Assigned from existing
+        poster: "KHALEET2.jpg"
     },
     {
         title: "Khaleet 003 / خليط ٠٠٣",
         date: "Saturday, January 13, 2018",
         location: "HIZZ, Cairo",
-        poster: "Shake and Destroy  DJ Haram x Drummer B x Bashar Suleiman.jpg" // Assigned from existing
+        poster: "KHALEET3.jpg"
     },
     {
         title: "Thursday Night Beat Down feat. R A G E H",
@@ -53,25 +53,26 @@ let events = [
         title: "Khaleet 004 / خليط ٠٠٤",
         date: "Friday, January 26, 2018",
         location: "Uncle Sam Pub, Amman",
-        poster: "Record Store Day OPEN HOUSE.jpg" // Assigned from existing
+        poster: "KHALEET4.jpg"
+
     },
     {
         title: "Drummer B x ONSY x Bashar Suleiman",
         date: "Wednesday, March 14, 2018",
         location: "Zigzag, Cairo",
-        poster: "Open House.jpg" // Assigned from existing
+        poster: "zigzag.gif"
     },
     {
         title: "Khaleet 005 / خليط ٠٠٥",
         date: "Wednesday, April 25, 2018",
         location: "HIZZ, Cairo",
-        poster: "hizz open house.jpg" // Assigned from existing
+        poster: "KHALEET5.jpg"
     },
     {
         title: "Khaleet 006 / خليط ٠٠٦",
         date: "Sunday, May 27, 2018",
         location: "Kiesling, Detroit",
-        poster: "Kafr El-Dauwar Records.jpg" // Assigned from existing
+        poster: "KHALEET6.jpg"
     },
     {
         title: "Livestream w Youssef Abouzeid X Bashar Suleiman X Torkhy",
@@ -83,23 +84,34 @@ let events = [
         title: "INSIN - Livestream",
         date: "Wednesday, August 8, 2018",
         location: "HIZZ, Cairo",
-        poster: "Freya Edmondes-Livestream.jpg"
+        poster: "insinlive.jpg"
     },
     {
         title: "Youssef Abouzeid 'Captain Solo' Release Party",
         date: "Wednesday, August 29, 2018",
         location: "Bardo Clubhouse, Maadi",
-        poster: "HIZZ Detroit Black Friday Grand Opening.jpg" // Assigned from existing
+        poster: "CAPTAIN SOLO RELEASE PARTY.jpg"
     },
     {
         title: "assembli X Hizz present Cairo Invasion",
         date: "Friday, November 16, 2018",
         location: "MENA Tyche Hotel, Amman",
-        poster: "JessicaSligter + OwenGardner LIVE.jpg" // Assigned from existing
+        poster: "assembli X Hizz.gif"
+    }, {
+        title: "Smash Beats / INSIN / RAMA",
+        date: "Tues, January 15, 2018",
+        location: "Cairo Jazz Club",
+        poster: "insinramasmash.jpg"
+    },
+    {
+        title: "Electronic Night with Youssef Abouzeid at Room",
+        date: "Sat, Jan 19 2019",
+        location: "ROOM Art Space",
+        poster: "YOUSSEF ABOUZEIDROOM.jpg"
     },
     {
         title: "IV IV أربعة أربعة",
-        date: "Sunday, February 3, 2019",
+        date: "Sunday, February 3, 2018",
         location: "HIZZ, Cairo",
         poster: "44.jpg"
     },
@@ -137,7 +149,7 @@ let events = [
         title: "J!N Album Release",
         date: "Saturday, September 14, 2019",
         location: "HIZZ, Cairo",
-        poster: "slovvdk.jpg" // Assigned from existing
+        poster: "jin.jpg"
     },
     {
         title: "Ya Khal Album Release",
@@ -149,7 +161,7 @@ let events = [
         title: "Fuzzylittlebrain Album Release",
         date: "Friday, November 15, 2019",
         location: "HIZZ, Cairo",
-        poster: "MAURICEMAXTON.jpg" // Assigned from existing
+        poster: "fuzzylittlebrain.jpg"
     },
     {
         title: "HIZZ Detroit Black Friday Grand Opening",
@@ -167,7 +179,7 @@ let events = [
         title: "TAKH Album Release",
         date: "Thursday, December 5, 2019",
         location: "HIZZ, Cairo",
-        poster: "amélie legrand.jpg" // Assigned from existing
+        poster: "takh.jpg"
     },
     {
         title: "Slovvdk سلوديكاي",
@@ -203,7 +215,7 @@ let events = [
         title: "Juliana Huxtable X Nadah El Shazly X KZLK",
         date: "Tuesday, January 21, 2020",
         location: "HIZZ, Cairo",
-        poster: "XXXXXXXXXXXX.jpg"
+        poster: "JULIANAHUXTABLE-NADAHELSHAZLY-KZLK.jpg"
     },
     {
         title: "Kid Fourteen + Prof.k",
@@ -218,88 +230,88 @@ let events = [
         poster: "shk.jpg"
     },
     {
-        title: "25 Maadi",
+        title: "hizz party",
         date: "Friday, February 25, 2022",
         location: "Maadi, Cairo",
-        poster: "Weight of the Heart  Bana Kabalan.jpg" // Assigned from existing
+        poster: "hizz party.jpg"
     },
     {
         title: "Abosahar at CJC Cairo",
         date: "Saturday, July 20, 2024",
-        location: "Cairo Jazz Club (CJC), Cairo, Egypt",
-        poster: "Shake and Destroy  DJ Haram x Drummer B x Bashar Suleiman.jpg" // Assigned from existing
+        location: "Cairo Jazz Club",
+        // poster: "Shake and Destroy  DJ Haram x Drummer B x Bashar Suleiman.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Yverdon",
         date: "Saturday, August 10, 2024",
         location: "Festival Le Castrum, Yverdon, Switzerland",
-        poster: "Record Store Day OPEN HOUSE.jpg" // Assigned from existing
+        // poster: "Record Store Day OPEN HOUSE.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Montpellier",
         date: "Monday, August 12, 2024",
         location: "Montpellier, France",
-        poster: "Open House.jpg" // Assigned from existing
+        // poster: "Open House.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Toulouse",
         date: "Tuesday, August 13, 2024",
         location: "Troisième Loutre, Toulouse",
-        poster: "hizz open house.jpg" // Assigned from existing
+        // poster: "hizz open house.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Pau",
         date: "Wednesday, August 14, 2024",
         location: "Galaxie 23 x Live, Pau, France",
-        poster: "Kafr El-Dauwar Records.jpg" // Assigned from existing
+        // poster: "Kafr El-Dauwar Records.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Geneva",
         date: "Friday, August 16, 2024",
         location: "Théâtre de l’Orangerie, Geneva, Switzerland",
-        poster: "JessicaSligter + OwenGardner LIVE.jpg" // Assigned from existing
+        // poster: "JessicaSligter + OwenGardner LIVE.jpg" // Assigned from existing
     },
     {
         title: "Abosahar at Chilloposite Festival",
         date: "Saturday, October 5, 2024",
         location: "Dahab, EG",
-        poster: "amélie legrand.jpg" // Assigned from existing
+        // poster: "amélie legrand.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Rotterdam",
         date: "Friday, October 11, 2024",
         location: "Radicalisms Festival, Rotterdam, Netherlands",
-        poster: "MAURICEMAXTON.jpg" // Assigned from existing
+        // poster: "MAURICEMAXTON.jpg" // Assigned from existing
     },
     {
         title: "HIZZ",
         date: "Thursday, October 17, 2024",
         location: "La Chaux d’Ouvron, Geneva, Switzerland",
-        poster: "slovvdk.jpg" // Assigned from existing
+        // poster: "slovvdk.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Lyon",
         date: "Friday, October 18, 2024",
         location: "Sonic 10, Lyon, France",
-        poster: "FREDERIC.jpg" // Assigned from existing
+        // poster: "FREDERIC.jpg" // Assigned from existing
     },
     {
         title: "HIZZ Tour: Amsterdam",
         date: "Saturday, October 19, 2024",
         location: "Garage Noord, Amsterdam, Netherlands",
-        poster: "TURQUOISE DESERT RESEARCH PROGRAMME PRESENTATIONS + AFTERPARTY.jpg" // Assigned from existing
+        // poster: "TURQUOISE DESERT RESEARCH PROGRAMME PRESENTATIONS + AFTERPARTY.jpg" // Assigned from existing
     },
     {
         title: "Abosahar at CJC",
         date: "Saturday, October 26, 2024",
         location: "Cairo Jazz Club (CJC), Cairo, Egypt",
-        poster: "KID FOURTEEN.jpg" // Assigned from existing
+        // poster: "KID FOURTEEN.jpg" // Assigned from existing
     },
     {
         title: "Abosahar at CJC Cairo",
         date: "Saturday, December 21, 2024",
         location: "Cairo Jazz Club (CJC), Cairo, Egypt",
-        poster: "shk.jpg" // Assigned from existing
+        // poster: "shk.jpg" // Assigned from existing
     }
 ];
 function reformatDate(dateString) {
@@ -403,138 +415,150 @@ let albums = [
     },
     {
         id: 8,
+        title: "mmkn as3dk l2 mrci",
+        artist: "YK",
+        link: "https://soundcloud.com/hizzme/sets/mmkn-as3dk-l2-mrci"
+    },
+    {
+        id: 9,
         title: "SADSUN",
         artist: "INSIN",
         link: "https://hizzme.bandcamp.com/album/sadsun"
     },
     {
-        id: 9,
+        id: 10,
         title: "∞σ",
         artist: "DG Hadi",
         link: "https://hizzme.bandcamp.com/album/-"
     },
     {
-        id: 10,
+        id: 11,
+        title: "b7bk ysta",
+        artist: "YK",
+        link: "https://soundcloud.com/hizzme/sets/yk-b7bk-ysta"
+    },
+    {
+        id: 12,
         title: "The Caveman",
         artist: "ABOsahar",
         link: "https://hizzme.bandcamp.com/album/the-caveman"
     },
     {
-        id: 11,
+        id: 13,
         title: "pink stm & wite ptl",
         artist: "J!N",
         link: "https://hizzme.bandcamp.com/album/pink-stm-wite-ptl-2"
     },
     {
-        id: 12,
+        id: 14,
         title: "KOMBILE 002",
         artist: "HIZZ",
         link: "https://hizzme.bandcamp.com/album/kombile-002"
     },
     {
-        id: 13,
+        id: 15,
         title: "fuzzylittlebrain",
         artist: "fuzzylittlebrain",
         link: "https://hizzme.bandcamp.com/album/fuzzylittlebrain"
     },
     {
-        id: 14,
+        id: 16,
         title: "aho",
         artist: "youssef abouzeid",
         link: "https://hizzme.bandcamp.com/album/aho"
     },
     {
-        id: 15,
+        id: 17,
         title: "Foreigner",
         artist: "JIN",
         link: "https://hizzme.bandcamp.com/album/foreigner"
     },
     {
-        id: 16,
+        id: 18,
         title: "Attraction",
         artist: "DAHB",
         link: "https://hizzme.bandcamp.com/album/attraction"
     },
     {
-        id: 17,
+        id: 19,
         title: "Anterior",
         artist: "Timmy Mowafi",
         link: "https://hizzme.bandcamp.com/album/anterior"
     },
     {
-        id: 18,
+        id: 20,
         title: "BAD SECTOR",
         artist: "[machine.condition]",
         link: "https://hizzme.bandcamp.com/album/bad-sector"
     },
     {
-        id: 19,
+        id: 21,
         title: "Entity",
         artist: "Gast",
         link: "https://hizzme.bandcamp.com/album/entity"
     },
     {
-        id: 20,
+        id: 22,
         title: "Shuttle Juice",
         artist: "Hebatallah",
         link: "https://hizzme.bandcamp.com/album/shuttle-juice"
     },
     {
-        id: 21,
+        id: 23,
         title: "Ma2ali",
         artist: "ARRAKK",
         link: "https://hizzme.bandcamp.com/album/ma2ali"
     },
     {
-        id: 22,
+        id: 24,
         title: "many sins, mini synths",
         artist: "Centum/ˈsɛntəm/",
         link: "https://hizzme.bandcamp.com/album/many-sins-mini-synths"
     },
     {
-        id: 23,
+        id: 25,
         title: "Mechanical Love",
         artist: "J!N",
         link: "https://hizzme.bandcamp.com/album/mechanical-love"
     },
     {
-        id: 24,
+        id: 26,
         title: "Electric*té Du Liban",
         artist: "Baytee Baytak",
         link: "https://hizzme.bandcamp.com/album/electric-t-du-liban"
     },
     {
-        id: 25,
+        id: 27,
         title: "MoultingKICK_23652",
         artist: "Centum/ˈsɛntəm/",
         link: "https://hizzme.bandcamp.com/album/moultingkick-23652"
     },
     {
-        id: 26,
+        id: 28,
         title: "KOMBILE 003",
         artist: "HIZZ",
         link: "https://hizzme.bandcamp.com/album/kombile-003"
     },
     {
-        id: 27,
+        id: 29,
         title: "تلاته",
         artist: "Lotfy",
         link: "https://hizzme.bandcamp.com/album/--2"
     },
     {
-        id: 28,
+        id: 30,
         title: "bb",
         artist: "DG Hadi",
         link: "https://hizzme.bandcamp.com/album/bb"
     },
     {
-        id: 29,
+        id: 31,
         title: "TassTooz",
         artist: "Baytee Baytak",
         link: "https://hizzme.bandcamp.com/album/tasstooz"
     },
     {
-        id: 30,
+        id: 32,
         title: "باندا",
         artist: "سته ستميه باند",
         link: "https://hizzme.bandcamp.com/album/--4"
@@ -546,7 +570,7 @@ if (albumsContiner) {
     let albumsHTML = ``;
     albums.forEach(album => {
         albumsHTML += `
-                    <a class="album" id="album${album.id}" href="${album.link}">
+                    <a class="album" id="album${album.id}" href="${album.link}" target="_blank">
                         <img src="assets/imgs/albumcovers/${album.title}.webp" alt="${album.title} cover">
                         <div class="albumInfo">
                         <span class="albumTitle">${album.title}</span>
@@ -569,3 +593,55 @@ if (galleryContiner) {
         galleryContiner.appendChild(img);
     }
 }
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     let logoElement = document.querySelector(".logo");
+//     console.log(logoElement); // Check if the logo element is selected
+
+//     if (logoElement) {
+//         let isDragging = false;
+//         let offsetX, offsetY;
+
+//         logoElement.addEventListener("mousedown", (e) => {
+//             e.preventDefault(); // Prevent default image dragging
+//             isDragging = true;
+//             offsetX = e.clientX - logoElement.getBoundingClientRect().left;
+//             offsetY = e.clientY - logoElement.getBoundingClientRect().top;
+
+//             logoElement.style.pointerEvents = "auto"; // Allow dragging (block clicks underneath)
+//             logoElement.style.cursor = "grabbing"; // Change cursor to grabbing
+//         });
+
+//         document.addEventListener("mousemove", (e) => {
+//             if (isDragging) {
+//                 logoElement.style.left = `${e.clientX - offsetX}px`;
+//                 logoElement.style.top = `${e.clientY - offsetY}px`;
+//                 logoElement.style.transform = "none"; // Disable translate while dragging
+//             }
+//         });
+
+//         document.addEventListener("mouseup", () => {
+//             if (isDragging) {
+//                 isDragging = false;
+//                 logoElement.style.pointerEvents = "none"; // Allow clicks to pass through when not dragging
+//                 logoElement.style.cursor = "grab"; // Reset cursor to grab
+//                 logoElement.style.transform = "translate(-50%, -50%)"; // Reapply transform to keep the logo centered
+//             }
+//         });
+
+//         // Prevent default drag behavior on the image
+//         logoElement.addEventListener("dragstart", (e) => {
+//             e.preventDefault();
+//         });
+
+//         // Ensure the logo is clickable when not dragging
+//         logoElement.addEventListener("click", (e) => {
+//             if (!isDragging) {
+//                 console.log("Logo clicked!"); // Add your click logic here
+//             }
+//         });
+//     } else {
+//         console.error("Logo element not found!");
+//     }
+// });
