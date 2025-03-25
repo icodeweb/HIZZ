@@ -5,9 +5,6 @@
     font-family: monospace;
 }
 
-/* :root{
-
-} */
 
 body {
     background-color: black;
@@ -240,4 +237,127 @@ button {
 
 .album img {
     width: 350px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        top: auto;
+        bottom: 10%;
+        transform: translateY(0%);
+        width: 65%;
+    }
+
+    nav {
+        top: 10%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .albums {
+        padding-left: 0%;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 4rem;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        margin-top: 15%;
+        transform: translateY(0%);
+    }
+
+    .album {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .events {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        width: 100%;
+        padding: 35% 10% 5% 10%;
+        width: 100%;
+    }
+
+    .event {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        border-bottom: 1px solid rgb(61, 61, 61);
+        padding: 1rem 0px;
+    }
+
+    .eventsHead {
+        position: sticky;
+        top: 0px;
+        padding: 15px 0px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: fixed;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .gallery {
+        margin-top: 1rem;
+        gap: 2rem;
+    }
+
+    .gallery img {
+        width: 100vw !important;
+        /* height: 80vh; */
+    }
+
+    .About {
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 7% 5rem 20%;
+        gap: 1.5rem;
+    }
+
+    .thankyou {
+        display: flex;
+        padding: 10% 10% 10% 25%;
+    }
+
+    #label-info {
+        line-height: 20px;
+    }
+
+    .demos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        padding-left: 0%;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 3rem;
+        padding-left: 0%;
+    }
+
+    .titleSpan {
+        font-size: 15px;
+        padding-left: 20%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-inline: 20%;
+    }
 }
