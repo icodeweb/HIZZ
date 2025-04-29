@@ -364,7 +364,7 @@ if (eventsContiner) {
 }
 
 // albums // albums // albums // albums
-let albums = [
+let albumsArray = [
     {
         id: 1,
         title: "Inside the Blue",
@@ -559,6 +559,8 @@ let albums = [
     }
 ];
 
+let albums = albumsArray.reverse()
+
 let albumsContiner = document.querySelector(".albums");
 if (albumsContiner) {
     let albumsHTML = ``;
@@ -574,7 +576,30 @@ if (albumsContiner) {
     })
     albumsContiner.innerHTML = albumsHTML
 }
+let albumsScroll;
 
+function startAutoScroll() {
+    albumsScroll = setInterval(() => {
+        albumsContiner.scrollLeft += 1.1;
+        if (albumsContiner.scrollLeft >= albumsContiner.scrollWidth - albumsContiner.clientWidth) {
+            clearInterval(albumsScroll);
+            albumsScroll = null; // 🧠 IMPORTANT: allow restart
+            albumsContiner.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+            });
+        }
+    }, 30);
+}
+
+albumsContiner.addEventListener("scroll", function () {
+    if (albumsContiner.scrollLeft === 0 && albumsScroll === null) {
+        setTimeout(startAutoScroll, 300); // wait for smooth scroll to finish
+    }
+});
+
+startAutoScroll();
 
 // gallery // gallery // gallery // gallery 
 let galleryContiner = document.querySelector(".gallery");
@@ -587,6 +612,8 @@ if (galleryContiner) {
         galleryContiner.appendChild(img);
     }
 }
+
+
 
 
 // document.addEventListener("DOMContentLoaded", () => {

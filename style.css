@@ -18,12 +18,15 @@ body {
 }
 
 .albums {
-    padding-left: 20%;
     width: 100%;
+    padding-left: 20%;
+    overflow-x: auto;
+
     display: flex;
-    flex-direction: row-reverse;
-    gap: 7rem;
+    /* flex-direction: row-reverse; */
     justify-content: left;
+    gap: 7rem;
+
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
