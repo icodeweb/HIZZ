@@ -562,6 +562,24 @@ let albumsArray = [
 let albums = albumsArray.reverse()
 
 let albumsContiner = document.querySelector(".albums");
+let albumsScroll;
+
+function startAutoScroll() {
+    albumsScroll = setInterval(() => {
+        albumsContiner.scrollLeft += 1.1;
+        if (albumsContiner.scrollLeft >= albumsContiner.scrollWidth - albumsContiner.clientWidth) {
+            clearInterval(albumsScroll);
+            albumsScroll = null;
+            albumsContiner.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+            });
+        }
+    }, 30);
+}
+
+
 if (albumsContiner) {
     let albumsHTML = ``;
     albums.forEach(album => {
@@ -575,31 +593,16 @@ if (albumsContiner) {
                         </a>`
     })
     albumsContiner.innerHTML = albumsHTML
-}
-let albumsScroll;
 
-function startAutoScroll() {
-    albumsScroll = setInterval(() => {
-        albumsContiner.scrollLeft += 1.1;
-        if (albumsContiner.scrollLeft >= albumsContiner.scrollWidth - albumsContiner.clientWidth) {
-            clearInterval(albumsScroll);
-            albumsScroll = null; // 🧠 IMPORTANT: allow restart
-            albumsContiner.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: "smooth",
-            });
+    albumsContiner.addEventListener("scroll", function () {
+        if (albumsContiner.scrollLeft === 0 && albumsScroll === null) {
+            setTimeout(startAutoScroll, 300);
         }
-    }, 30);
+    });
+
+    startAutoScroll();
 }
 
-albumsContiner.addEventListener("scroll", function () {
-    if (albumsContiner.scrollLeft === 0 && albumsScroll === null) {
-        setTimeout(startAutoScroll, 300); // wait for smooth scroll to finish
-    }
-});
-
-startAutoScroll();
 
 // gallery // gallery // gallery // gallery 
 let galleryContiner = document.querySelector(".gallery");
