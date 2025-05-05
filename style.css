@@ -365,3 +365,25 @@ button {
         padding-inline: 20%;
     }
 }
+
+.residency {
+    padding-top: 100px;
+    padding-left: 300px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: none;
+}
+
+.blur {
+    /* filter: blur(20px) invert(); */
+    /* transition: filter 10s; */
+}
+
+marquee {
+    position: fixed;
+    top: 10px;
+}

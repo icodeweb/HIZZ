@@ -360,8 +360,28 @@ if (eventsContiner) {
         eventElement.addEventListener("mouseleave", () => {
             posterElement.style.visibility = "hidden";
         });
+
+        eventElement.addEventListener("touchmove", (e) => {
+            const touch = e.touches[0];
+            const touchedElement = document.elementFromPoint(touch.clientX, touch.clientY);
+
+            if (touchedElement && touchedElement.classList.contains('event-item')) {
+                let eventId = touchedElement.dataset.id;
+                let selectedEvent = events.find(event => event.id === Number(eventId));
+
+                if (selectedEvent) {
+                    posterElement.src = 'assets/imgs/eventcovers/' + selectedEvent.poster;
+                    posterElement.style.visibility = "visible";
+                }
+            }
+        });
+
+        eventElement.addEventListener("touchend", () => {
+            posterElement.style.visibility = "hidden";
+        });
     });
 }
+
 
 // albums // albums // albums // albums
 let albumsArray = [
@@ -600,7 +620,16 @@ if (albumsContiner) {
         }
     });
 
-    startAutoScroll();
+    const minBreakpoint = 768;
+    const contentWidth = document.body.scrollWidth;
+    const viewportWidth = window.innerWidth;
+
+    const isWideEnough = viewportWidth > minBreakpoint;
+    const noHorizontalOverflow = contentWidth <= viewportWidth;
+
+    if (isWideEnough && noHorizontalOverflow) {
+        startAutoScroll();
+    }
 }
 
 
