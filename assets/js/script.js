@@ -644,3 +644,34 @@ if (galleryContiner) {
         galleryContiner.appendChild(img);
     }
 }
+
+
+// residency  // residency  // residency
+
+let residents = [
+    { name: "Abdullah Miniawy", year: "2017" },
+    { name: "Youssef Abouzeid", year: "2018-2019" },
+    { name: "Bashar Suleiman", year: "2018" },
+    { name: "Abo Sahar", year: "2018-2019" },
+    { name: "Drummer B", year: "2018" },
+    { name: "Insin", year: "2018" },
+    { name: "Bana Kabalan", year: "2019" },
+]
+
+
+let residencyContiner = document.querySelector(".residencyContent");
+
+let residencyHTML = '';
+
+residents.forEach(resident => {
+    residencyHTML += `
+                    <div class="resident">
+                    <a href="/residency/${resident.name}">
+                        <img src="/assets/imgs/residency/${resident.name}/cardIMG.jpg" alt="photo of ${resident.name}">
+                        <h3>${resident.name}</h3>
+                        <span>${resident.year}</span>
+                    </a>
+                    </div>
+    `
+})
+residencyContiner.innerHTML += residencyHTML;

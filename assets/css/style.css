@@ -369,19 +369,43 @@ button {
 .residency {
     padding-top: 100px;
     padding-left: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .blur {
+    filter: blur(20px) invert();
+    transition: filter 10s;
+} */
+
+marquee {
+    position: fixed;
+    top: 10px;
+}
+
+.residencyHead {
     gap: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.logo {}
-
-.blur {
-    /* filter: blur(20px) invert(); */
-    /* transition: filter 10s; */
+.residencyContent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
 }
 
-marquee {
-    position: fixed;
-    top: 10px;
+.resident {
+    width: 50%;
+
+}
+
+.resident a {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.resident a img {
+    width: 300px;
 }
