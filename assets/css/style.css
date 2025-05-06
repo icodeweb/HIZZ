@@ -374,9 +374,7 @@ button {
     flex-direction: column;
 }
 
-.logo {
-    display: none;
-}
+.logo {}
 
 .blur {
     /* filter: blur(20px) invert(); */

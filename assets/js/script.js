@@ -352,7 +352,7 @@ if (eventsContiner) {
             let eventId = eventElement.dataset.id;
             let selectedEvent = events.find(event => event.id === Number(eventId));
             if (selectedEvent) {
-                posterElement.src = 'assets/imgs/eventcovers/' + selectedEvent.poster;
+                posterElement.src = '/assets/imgs/eventcovers/' + selectedEvent.poster;
                 posterElement.style.visibility = "visible";
             }
         });
@@ -370,7 +370,7 @@ if (eventsContiner) {
                 let selectedEvent = events.find(event => event.id === Number(eventId));
 
                 if (selectedEvent) {
-                    posterElement.src = 'assets/imgs/eventcovers/' + selectedEvent.poster;
+                    posterElement.src = '/assets/imgs/eventcovers/' + selectedEvent.poster;
                     posterElement.style.visibility = "visible";
                 }
             }
@@ -638,63 +638,9 @@ let galleryContiner = document.querySelector(".gallery");
 if (galleryContiner) {
     for (let index = 0; index < 68; index++) {
         let img = document.createElement("img");
-        img.src = `assets/imgs/photos/hizzGlry${index + 1}.jpg`;
+        img.src = `/assets/imgs/photos/hizzGlry${index + 1}.jpg`;
         img.loading = "lazy";
         img.style.width = "70vw";
         galleryContiner.appendChild(img);
     }
 }
-
-
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     let logoElement = document.querySelector(".logo");
-//     console.log(logoElement); // Check if the logo element is selected
-
-//     if (logoElement) {
-//         let isDragging = false;
-//         let offsetX, offsetY;
-
-//         logoElement.addEventListener("mousedown", (e) => {
-//             e.preventDefault(); // Prevent default image dragging
-//             isDragging = true;
-//             offsetX = e.clientX - logoElement.getBoundingClientRect().left;
-//             offsetY = e.clientY - logoElement.getBoundingClientRect().top;
-
-//             logoElement.style.pointerEvents = "auto"; // Allow dragging (block clicks underneath)
-//             logoElement.style.cursor = "grabbing"; // Change cursor to grabbing
-//         });
-
-//         document.addEventListener("mousemove", (e) => {
-//             if (isDragging) {
-//                 logoElement.style.left = `${e.clientX - offsetX}px`;
-//                 logoElement.style.top = `${e.clientY - offsetY}px`;
-//                 logoElement.style.transform = "none"; // Disable translate while dragging
-//             }
-//         });
-
-//         document.addEventListener("mouseup", () => {
-//             if (isDragging) {
-//                 isDragging = false;
-//                 logoElement.style.pointerEvents = "none"; // Allow clicks to pass through when not dragging
-//                 logoElement.style.cursor = "grab"; // Reset cursor to grab
-//                 logoElement.style.transform = "translate(-50%, -50%)"; // Reapply transform to keep the logo centered
-//             }
-//         });
-
-//         // Prevent default drag behavior on the image
-//         logoElement.addEventListener("dragstart", (e) => {
-//             e.preventDefault();
-//         });
-
-//         // Ensure the logo is clickable when not dragging
-//         logoElement.addEventListener("click", (e) => {
-//             if (!isDragging) {
-//                 console.log("Logo clicked!"); // Add your click logic here
-//             }
-//         });
-//     } else {
-//         console.error("Logo element not found!");
-//     }
-// });

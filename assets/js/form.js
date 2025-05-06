@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         form.addEventListener("submit", function (event) {
             event.preventDefault();
 
-            emailjs.sendForm("service_dw3zi98", templateId, form, "xRYmkU_4Ct1duYCBt")
+            emailjs.sendForm("service_1a4iw8p", templateId, form, "xRYmkU_4Ct1duYCBt")
                 .then(() => {
                     window.location.href = "thankyou.html";
                 })
