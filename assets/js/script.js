@@ -648,30 +648,28 @@ if (galleryContiner) {
 
 // residency  // residency  // residency
 
-let residents = [
-    { name: "Abdullah Miniawy", year: "2017" },
-    { name: "Youssef Abouzeid", year: "2018-2019" },
-    { name: "Bashar Suleiman", year: "2018" },
-    { name: "Abo Sahar", year: "2018-2019" },
-    { name: "Drummer B", year: "2018" },
-    { name: "Insin", year: "2018" },
-    { name: "Bana Kabalan", year: "2019" },
+let residentsOG = [
+    { name: "Abdullah Miniawy", year: "2017", work: "https://soundcloud.com/abdullahmadm/sets/an-overview-of-ihsan-means" },
+    { name: "Youssef Abouzeid", year: "2018-2019", work: "https://hizzme.bandcamp.com/album/captain-solo" },
+    { name: "Bashar Suleiman", year: "2018", work: "https://hizzme.bandcamp.com/album/pink-tape" },
+    { name: "Abo Sahar", year: "2018-2019", work: "https://hizzme.bandcamp.com/album/the-caveman" },
+    { name: "Drummer B", year: "2018", work: "https://drummerb.bandcamp.com/album/valley-of-kings-detroit-to-cairo" },
+    { name: "Insin", year: "2018", work: "https://hizzme.bandcamp.com/album/sadsun" },
+    { name: "Bana Kabalan", year: "2019", work: "https://www.facebook.com/events/783780695327694" },
 ]
-
+let residents = residentsOG.reverse()
 
 let residencyContiner = document.querySelector(".residencyContent");
 
 let residencyHTML = '';
-
 residents.forEach(resident => {
     residencyHTML += `
-                    <div class="resident">
-                    <a href="/residency/${resident.name}">
-                        <img src="/assets/imgs/residency/${resident.name}/cardIMG.jpg" alt="photo of ${resident.name}">
-                        <h3>${resident.name}</h3>
-                        <span>${resident.year}</span>
-                    </a>
-                    </div>
-    `
+                    <a class="resident" href="${resident.work}" target="_blank">
+                        <img src="/assets/imgs/residency/${resident.name.replace(/\s+/g, '')}/cardIMG.jpg" alt="photo of ${resident.name}">
+                        <div class="residentInfo">
+                            <span>${resident.name}</span>
+                            <span>${resident.year}</span>
+                        </div>
+                    </a>`
 })
 residencyContiner.innerHTML += residencyHTML;
