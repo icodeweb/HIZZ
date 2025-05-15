@@ -651,9 +651,9 @@ if (galleryContiner) {
 let residentsOG = [
     { name: "Abdullah Miniawy", year: "2017", work: "https://soundcloud.com/abdullahmadm/sets/an-overview-of-ihsan-means" },
     { name: "Youssef Abouzeid", year: "2018-2019", work: "https://hizzme.bandcamp.com/album/captain-solo" },
-    { name: "Bashar Suleiman", year: "2018", work: "https://hizzme.bandcamp.com/album/pink-tape" },
+    { name: "Bashar Suleiman", year: "2018", work: "/BasharSuleiman" },
     { name: "Abo Sahar", year: "2018-2019", work: "https://hizzme.bandcamp.com/album/the-caveman" },
-    { name: "Drummer B", year: "2018", work: "https://drummerb.bandcamp.com/album/valley-of-kings-detroit-to-cairo" },
+    { name: "Drummer B", year: "2018", work: "/DrummerB" },
     { name: "Insin", year: "2018", work: "https://hizzme.bandcamp.com/album/sadsun" },
     { name: "Bana Kabalan", year: "2019", work: "https://www.facebook.com/events/783780695327694" },
 ]
@@ -661,15 +661,129 @@ let residents = residentsOG.reverse()
 
 let residencyContiner = document.querySelector(".residencyContent");
 
-let residencyHTML = '';
-residents.forEach(resident => {
-    residencyHTML += `
-                    <a class="resident" href="${resident.work}" target="_blank">
-                        <img src="/assets/imgs/residency/${resident.name.replace(/\s+/g, '')}/cardIMG.jpg" alt="photo of ${resident.name}">
-                        <div class="residentInfo">
-                            <span>${resident.name}</span>
-                            <span>${resident.year}</span>
-                        </div>
-                    </a>`
-})
-residencyContiner.innerHTML += residencyHTML;
+if (residencyContiner) {
+    let residencyHTML = '';
+    residents.forEach(resident => {
+        residencyHTML += `
+                        <a class="resident" href="../residency/${resident.work}">
+                            <img src="/assets/imgs/residency/${resident.name.replace(/\s+/g, '')}/cardIMG.jpg" alt="photo of ${resident.name}">
+                            <div class="residentInfo">
+                                <span>${resident.name}</span>
+                                <span>${resident.year}</span>
+                            </div>
+                        </a>`
+    })
+    residencyContiner.innerHTML += residencyHTML;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let logoDiv = document.querySelector(".logo")
+// let logoHandle = document.getElementById("logo-handle")
+// console.log(logoDiv);
+// console.log(logoHandle);
+
+
+// let isDragging = false;
+// let offsetX, offsetY;
+
+// logoHandle.addEventListener('mousedown', (e) => {
+//     isDragging = true;
+//     const rect = logoDiv.getBoundingClientRect();
+//     offsetX = e.clientX - rect.left;
+//     offsetY = e.clientY - rect.top;
+// });
+
+// document.addEventListener('mousemove', (e) => {
+//     if (isDragging) {
+//         logoDiv.style.left = (e.clientX - offsetX) + 'px';
+//         logoDiv.style.top = (e.clientY - offsetY) + 'px';
+//     }
+// });
+
+// document.addEventListener('mouseup', () => {
+//     isDragging = false;
+// });
+
+
+// let testImg = document.getElementById("test");
+// testImg.addEventListener("mouseenter", () => {
+//     testImg.src = "/assets/imgs/residency/BasharSuleiman/main2.png"
+// })
+// testImg.addEventListener("mouseleave", () => {
+//     testImg.src = "/assets/imgs/residency/BasharSuleiman/main1.png"
+// })

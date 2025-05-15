@@ -91,10 +91,19 @@ nav {
     top: 50%;
     transform: translateY(-50%);
     width: 700px;
-    filter: invert(1);
+    /* filter: invert(1); */
+
+    filter: blur(0px) invert(1);
+    /* display: none; */
+    /* transition: filter 3s; */
     pointer-events: none;
-    /* filter: blur(1px); */
+
 }
+
+/* .logo:hover {
+    filter: blur(20px) invert(1);
+    transition: all 3s;
+} */
 
 
 
@@ -464,15 +473,29 @@ marquee {
 }
 
 .residencyHead {
-    gap: 1rem;
+    /* gap: 1rem; */
     display: flex;
     padding-inline: 20% 10%;
-
+    /* gap: 7.5rem; */
     flex-direction: column;
 }
 
 .residencyHead p {
     line-height: 20px;
+}
+
+.residetHead p {
+    line-height: 20px;
+}
+
+.residetHead {
+    /* gap: 1rem; */
+    display: flex;
+    flex-direction: column;
+}
+
+.artistName {
+    font-size: 20px;
 }
 
 .residencyContent {
@@ -511,12 +534,190 @@ marquee {
     filter: grayscale(0);
 }
 
+
+.residentContent {
+    width: 100%;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.residentProfile {
+    width: 100%;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3rem;
+}
+
+.residetStory p {
+    line-height: 1.3rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    gap: 1.5rem;
+}
+
+.left {
+    width: 45%;
+}
+
+.left img {
+    width: 100%;
+    /* filter: grayscale(1); */
+}
+
+.left img:hover {
+    filter: grayscale(0);
+}
+
+
+.worksRow div a img {
+    width: 100%;
+}
+
+.worksRow div a img:hover {
+    filter: grayscale(0);
+}
+
+.worksRow div {
+    width: 45%;
+    text-align: center;
+}
+
+.worksRow div a {
+    text-decoration: none;
+}
+
+.works {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.worksRow {
+    display: flex;
+    gap: 2rem;
+}
+
+.worksRow div a img {
+    /* filter: grayscale(1); */
+}
+
+.residetStory {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 95%;
+}
+
+/* .residetHead {
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    padding-block: 1rem;
+} */
+
+
+
+
+
+
+
+
+
 /* 
-for each : 
-name
-main pic
-year
-small paragraph about the artist and his stay in hizz
-works :
-media
+.logo {
+    position: relative;
+    position: fixed;
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.logo img {
+    width: 700px;
+    filter: invert(1);
+}
+
+#logo-handle {
+    width: 100px;
+    height: 10px;
+    background: #ff0000;
+    z-index: 1;
+    cursor: move;
+    position: absolute;
+    pointer-events: all;
+}
+
 */
+
+
+/* #residetMedia {
+    display: flex;
+    align-items: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-left: 10%;
+    flex-wrap: wrap;
+} */
+
+#residetMedia {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-left: 10%;
+    padding-top: 2rem;
+    width: 97%;
+}
+
+#residetMedia img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+#residetMedia video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.big-vertical {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.big-vertical2 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.square {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.big-horizontal {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.wide-square {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.wide-horizontal {
+    grid-column: span 3;
+    grid-row: span 1;
+}
