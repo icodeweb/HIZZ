@@ -26,7 +26,7 @@ body {
 
 .albums {
     width: 100%;
-    padding-left: 20%;
+    padding-left: 40%;
     overflow-x: auto;
 
     display: flex;
@@ -454,6 +454,23 @@ button {
         margin: auto;
     }
 
+    .residentProfile {
+        flex-direction: column !important;
+    }
+
+    .residentProfile>* {
+        width: 90% !important;
+    }
+
+    #residetMedia {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        padding-left: 0%;
+        padding-top: 2rem;
+        width: 90% !important;
+    }
+
 }
 
 
@@ -547,7 +564,7 @@ marquee {
     width: 100%;
     padding-left: 10%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     gap: 3rem;
 }
 

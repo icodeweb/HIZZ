@@ -576,7 +576,19 @@ let albumsArray = [
         title: "باندا",
         artist: "سته ستميه باند",
         link: "https://hizzme.bandcamp.com/album/--4"
-    }
+    },
+    {
+        id: 33,
+        title: "Egram",
+        artist: "Eyad",
+        link: "https://heatcrimes.bandcamp.com/album/egram"
+    },
+    {
+        id: 34,
+        title: "rhlt jdi",
+        artist: "Elkotsh",
+        link: "https://heatcrimes.bandcamp.com/album/rhlt-jdi"
+    },
 ];
 
 let albums = albumsArray.reverse()
