@@ -437,6 +437,9 @@ button {
         gap: 20px;
     }
 
+    .main-form>input.btn {
+        width: 100px !important;
+    }
 
     .residentInfo {
         display: flex;
@@ -471,6 +474,58 @@ button {
         width: 90% !important;
     }
 
+    /* form-container */
+
+    .inline-container {
+        width: fit-content;
+        font-family: monospace !important;
+    }
+
+    .inline-container input {
+        border: 1px solid rgba(255, 255, 255, 0.233) !important;
+
+    }
+
+    .inline-container input:focus {
+        color: red !important;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .inline-container div div.text-center {
+        display: none;
+    }
+
+    .main-form {
+        flex-wrap: nowrap;
+        justify-content: center !important;
+        --font-family: monospace !important;
+    }
+
+    .main-form div {
+        display: flex;
+        flex-direction: row-reverse !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .emailoctopus-form {
+        padding: 0px !important;
+    }
+
+    .main-form>input {
+        padding: 0px !important;
+        width: 0px !important;
+    }
+
+    input[type="submit" i] {
+        padding-block: px !important;
+        padding-inline: 0px !important;
+    }
+
+    .Mailing {
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 
@@ -737,4 +792,66 @@ marquee {
 .wide-horizontal {
     grid-column: span 3;
     grid-row: span 1;
+}
+
+/* form-container */
+
+.inline-container {
+    width: fit-content;
+    font-family: monospace !important;
+}
+
+.inline-container input {
+    border: 1px solid rgba(255, 255, 255, 0.233) !important;
+
+}
+
+.inline-container input:focus {
+    color: white !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.inline-container div div.text-center {
+    display: none;
+}
+
+.main-form {
+    flex-wrap: wrap;
+    justify-content: flex-start !important;
+    --font-family: monospace !important;
+}
+
+.main-form div {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+.emailoctopus-form {
+    padding: 0px !important;
+}
+
+.main-form>input {
+    padding: 0px !important;
+    width: 0px !important;
+}
+
+input[type="submit" i] {
+    padding-block: 0px !important;
+    padding-inline: 0px !important;
+}
+
+.Mailing {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+[data-form="a54cec94-3466-11f0-be36-21bb1991b162"] .emailoctopus-form-wrapper .emailoctopus-success-message {
+    color: green !important;
+}
+
+[data-form="a54cec94-3466-11f0-be36-21bb1991b162"] .emailoctopus-form-wrapper .emailoctopus-error-message {
+    color: red !important;
 }
