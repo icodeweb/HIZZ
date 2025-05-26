@@ -1,3 +1,4 @@
+// nav hover effect
 let subPageLinks = document.querySelectorAll(".subPageLink");
 document.addEventListener("DOMContentLoaded", function () {
     let currentPage = window.location.pathname.split("/").pop();
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// array of events
 let events = [
     {
         title: "House Openning",
@@ -306,14 +308,23 @@ let events = [
         date: "October 19, 2024",
         location: "Amsterdam, Netherlands",
         poster: "oct24.jpg"
-    }
+    }, {
+        title: "Mahragan Night / 6600band and Abosahar",
+        date: "May 31, 2025",
+        location: "Cairo Jazz Club",
+        link: "https://cairojazzclub.com/events/view-event/4558/Arabic-Folk",
+        poster: "31may25.jpg"
+    },
 ];
+
+// events date reformat Month DD, YYYY
 function reformatDate(dateString) {
     const date = new Date(dateString);
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return date.toLocaleDateString('en-US', options);
 }
 
+// make the events list
 let eventsContiner = document.querySelector(".events");
 if (eventsContiner) {
     events.forEach((event, index) => {
@@ -617,7 +628,7 @@ if (albumsContiner) {
     albums.forEach(album => {
         albumsHTML += `
                     <a class="album" id="album${album.id}" href="${album.link}" target="_blank">
-                        <img src="assets/imgs/albumcovers/${album.title}.webp" alt="${album.title} cover">
+                        <img src="/assets/imgs/albumcovers/${album.title}.webp" alt="${album.title} cover">
                         <div class="albumInfo">
                         <span class="albumTitle">${album.title}</span>
                         <span class="albumArtist">${album.artist}</span>
@@ -688,114 +699,121 @@ if (residencyContiner) {
     residencyContiner.innerHTML += residencyHTML;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let logoDiv = document.querySelector(".logo")
-// let logoHandle = document.getElementById("logo-handle")
-// console.log(logoDiv);
-// console.log(logoHandle);
-
-
-// let isDragging = false;
-// let offsetX, offsetY;
-
-// logoHandle.addEventListener('mousedown', (e) => {
-//     isDragging = true;
-//     const rect = logoDiv.getBoundingClientRect();
-//     offsetX = e.clientX - rect.left;
-//     offsetY = e.clientY - rect.top;
-// });
-
-// document.addEventListener('mousemove', (e) => {
-//     if (isDragging) {
-//         logoDiv.style.left = (e.clientX - offsetX) + 'px';
-//         logoDiv.style.top = (e.clientY - offsetY) + 'px';
-//     }
-// });
-
-// document.addEventListener('mouseup', () => {
-//     isDragging = false;
-// });
-
-
-// let testImg = document.getElementById("test");
-// testImg.addEventListener("mouseenter", () => {
-//     testImg.src = "/assets/imgs/residency/BasharSuleiman/main2.png"
-// })
-// testImg.addEventListener("mouseleave", () => {
-//     testImg.src = "/assets/imgs/residency/BasharSuleiman/main1.png"
-// })
+let lateReleasesElemnt = document.getElementById("late-releases")
+
+
+// last3albums
+let last3albumsElemnt = document.getElementById("last3albums")
+if (last3albumsElemnt) {
+    let last3albumsHTML = ``;
+    albums.forEach((album, index) => {
+        if (index < 3) {
+            last3albumsHTML += `
+                        <a class="album" id="album${album.id}" href="${album.link}" target="_blank">
+                            <img src="/assets/imgs/albumcovers/${album.title}.webp" alt="${album.title} cover">
+                            <div class="albumInfo">
+                            <span class="albumTitle">${album.title}</span>
+                            <span class="albumArtist">${album.artist}</span>
+                            </div>
+                            </a>`
+        }
+    })
+    last3albumsElemnt.innerHTML = last3albumsHTML;
+}
+
+
+// updates // updates // updates
+
+let updates = [
+    {
+        id: 1,
+        date: "25 may 25",
+        title: "Album of the Week on The Quietus",
+        content: "The Quietus picked our latest release as their Album of the Week and wrote a full review. Big thanks to them for the thoughtful words and support.",
+        hasImage: true
+    },
+    {
+        id: 2,
+        date: "24 may 25",
+        title: "Elkotsh – rhlt jdi out now",
+        content: "Elkotsh’s debut album is here, rhlt jdi blends raw percussion, acid synths, and warped rhythms. It’s a fresh voice in Egypt’s growing electronic scene.",
+        hasImage: true
+    },
+    {
+        id: 3,
+        date: "23 may 25",
+        title: "New contact email",
+        content: "We’ve updated our email. Reach us now at contact@hizz.me instead of the old one.",
+        hasImage: false
+    },
+]
+
+let NewsElemnt = document.getElementById("News")
+if (NewsElemnt) {
+    let NewsElemntHTML = ``;
+    updates.forEach((update, index) => {
+        if (index < ((updates.length + 1) - (updates.length - 3))) {
+            NewsElemntHTML += `
+                        <div class="news-item">
+                        <img src="/assets/imgs/news/${update.hasImage ? update.id : "logo"}.jpg">
+                            <details open >
+                                <summary><strong>${update.title}</strong></summary>
+                                <p>${update.content}</p>
+                            </details>
+                        </div>
+                        `
+        }
+    })
+    NewsElemnt.innerHTML = NewsElemntHTML;
+}
+
+
+
+let upcomingEvents = [
+    {
+        title: "Mahragan Night / 6600band and Abosahar",
+        date: "May 31, 2025",
+        location: "Cairo Jazz Club",
+        link: "https://cairojazzclub.com/events/view-event/4558/Arabic-Folk",
+        poster: "31may25"
+    },
+]
+
+let upcomingEventsListElemnt = document.getElementById("upcoming-events-list")
+if (upcomingEventsListElemnt) {
+    let upcomingEventsListHTML = ``;
+    upcomingEvents.forEach((event, index) => {
+        if (index < 3) {
+            upcomingEventsListHTML += `
+            <div class="upcoming-event">
+                <a href="${event.link}" target="_blank">
+                    <img src="/assets/imgs/eventcovers/${event.poster}.jpg">
+                    <div class="upcoming-event-data">
+                        <strong>${event.title}</strong>
+                        <div>
+                            <p>${event.date}</p>
+                            <p>${event.location}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>`
+        }
+    })
+    upcomingEventsListElemnt.innerHTML = upcomingEventsListHTML;
+}
+let preEventsListElemnt = document.getElementById("pre-events-list")
+if (preEventsListElemnt) {
+    let preEventsListHTML = ``;
+    events.reverse().forEach((event, index) => {
+        if (index < 5 && index > 0) {
+            // use day.js to make this dynamic , auro-list the events in upcoming and prev. 
+            preEventsListHTML += `
+    <div class="event" id="event${event.id}" data-id="${event.id}">
+        <span class="eventDate">${event.date}</span>
+        <span class="eventTitle">${event.title}</span>
+        <span class="eventLocation">${event.location}</span>
+    </div>`
+        }
+    })
+    preEventsListElemnt.innerHTML = preEventsListHTML;
+}
