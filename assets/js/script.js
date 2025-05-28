@@ -817,3 +817,29 @@ if (preEventsListElemnt) {
     })
     preEventsListElemnt.innerHTML = preEventsListHTML;
 }
+
+let residencyBCElemnt = document.getElementById("residencyBC");
+let residencyBChtml = '';
+if (residencyBCElemnt) {
+    for (let index = 0; index < residents.length; index++) {
+        let resident = residents[index]
+        residencyBChtml += `
+                        <a class="residentEventLink" href="../residency/${resident.work}">${resident.name}</a>`
+    }
+    residencyBCElemnt.innerHTML += residencyBChtml;
+}
+
+// <img src="/assets/imgs/residency/${resident.name.replace(/\s+/g, '')}/cardIMG.jpg" alt="photo of ${resident.name}">
+// residencyBCIMG
+
+
+
+let residentEventLinks = document.querySelectorAll(".residentEventLink")
+let residencyBCIMG = document.getElementById("residencyBCIMG")
+if (residentEventLinks) {
+    residentEventLinks.forEach((link, index) => {
+        link.addEventListener("mouseover", () => {
+            residencyBCIMG.src = `/assets/imgs/residency/${link.innerText.replace(/\s+/g, '')}/cardIMG.jpg`
+        })
+    })
+}

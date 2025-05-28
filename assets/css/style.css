@@ -1021,3 +1021,35 @@ details>p {
     display: flex;
     flex-direction: column;
 }
+
+.residencyBCPIC {
+    width: 50%;
+}
+
+.BCBC {
+    display: flex;
+}
+
+.BCBC>div {
+    width: 50%;
+}
+
+.BCBC>div img {
+    width: 100%;
+}
+
+
+.residentEventLink {
+    /*  */
+}
+
+.residentEventLink:hover {
+    padding: 1rem;
+}
+
+.residencyBC {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    font-size: 30px;
+}
