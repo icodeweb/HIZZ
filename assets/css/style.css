@@ -661,10 +661,6 @@ marquee {
     line-height: 20px;
 }
 
-.residetHead p {
-    line-height: 20px;
-}
-
 .residetHead {
     /* gap: 1rem; */
     display: flex;
@@ -1022,34 +1018,40 @@ details>p {
     flex-direction: column;
 }
 
-.residencyBCPIC {
-    width: 50%;
-}
-
-.BCBC {
-    display: flex;
-}
-
-.BCBC>div {
-    width: 50%;
-}
-
-.BCBC>div img {
+.residencySection {
     width: 100%;
+    display: flex;
+    gap: 3rem;
 }
 
-
-.residentEventLink {
-    /*  */
+.leftSide,
+.rightSide {
+    width: 50%;
 }
 
-.residentEventLink:hover {
-    padding: 1rem;
+.residencyBCPIC img {
+    width: 100%;
 }
 
 .residencyBC {
     display: flex;
-    width: 200px;
     flex-direction: column;
-    font-size: 30px;
+}
+
+.residencyBC a {
+    font-size: 20px;
+
+}
+
+
+.residencyHead2 {
+    /* gap: 1rem; */
+    display: flex;
+
+    /* gap: 7.5rem; */
+    flex-direction: column;
+}
+
+.residencyHead2 p {
+    line-height: 20px;
 }
