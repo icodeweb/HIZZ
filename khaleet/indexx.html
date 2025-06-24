@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HIZZ / Residency</title>
+    <title>HIZZ / mixes</title>
     <meta name="description"
         content="CAIRO based record label, artists residency and record store with the aim of promoting avant garde art and music in the arab world and diaspora.">
     <meta name="keywords"
@@ -30,7 +29,7 @@
 </head>
 
 <body>
-    <div class="pageContainerWide">
+    <div class="pageContainer">
         <img class="logo" src="/assets/imgs/logo.png" alt="logo">
         <nav>
             <a href="/" class="subPageLink">
@@ -46,10 +45,10 @@
                 <span>Events</span>
             </a>
             <a href="/residency" class="subPageLink">
-                <span>/</span>
+                <span class="linkLine">|</span>
                 <span>Residency</span></a>
             <a href="/gallery" class="subPageLink">
-                <span class="linkLine">|</span>
+                <span>/</span>
                 <span>Gallery</span></a>
             <a href="/about" class="subPageLink">
                 <span class="linkLine">|</span>
@@ -60,27 +59,77 @@
             <a href="https://soundcloud.com/hizzme" target="_blank"><img src="/assets/imgs/links/sc.png"></a>
             <a href="https://www.instagram.com/hizz.me" target="_blank"><img src="/assets/imgs/links/ig.png"></a>
         </div>
-
         <section class="residencySection">
+
             <div class="leftSide">
-                <div class="residencyBCPIC" id="residencyBCPIC">
-                    <img id="residencyBCIMG" src="/assets/imgs/residency/BanaKabalan/cardIMG.jpg">
-                </div>
+                <a id="khaleet-link" target="_blank" href="https://soundcloud.com/hizzme/sets/khaleet">
+                    <div class="residencyBCPIC" id="residencyBCPIC">
+                        <img id="residencyBCIMG" src="/assets/imgs/khaleet/1.jpg">
+                    </div>
+                </a>
             </div>
 
             <div class="rightSide">
-                <div class="residencyHead2" style="display: none;">
-                    <p>our different spaces in Cairo have hosted a number of artists in residency — <br>
-                        offering
-                        time and room to create, experiment, and develop new work, <br>
-                        connecting them with local artists and the city’s creative scene.</p>
-                    <p><small>*</small>Residency applications open later this year — stay tuned.</p>
-                    <p><strong>Selected previous residents:</strong></p>
-                </div>
-                <div class="residencyBC" id="residencyBC"></div>
-
+                <div class="residencyBC" id="khaleet-selectors"></div>
         </section>
     </div>
+    </div>
+    <script>
+        let khaleets = [{
+            artist: "ONSY",
+        }, {
+            artist: "Cartoon Therapy",
+        }, {
+            artist: "Shawerma",
+        }, {
+            artist: "Bashar Suleiman",
+        }, {
+            artist: "ABOsahar",
+        }, {
+            artist: "PADFUT",
+        }, {
+            artist: "CHE",
+        }, {
+            artist: "SPECIAL NID",
+        }, {
+            artist: "Drummer B",
+        }, {
+            artist: "DG Hadi",
+        }, {
+            artist: "L▼TekΛ",
+        }, {
+            artist: "BayteeBayteak",
+        },
+        ]
+
+        khaleets.forEach((khaleet, index) => {
+            khaleet.id = index + 1
+            khaleet.imgSrc = `../assets/imgs/khaleet/${khaleet.id}.jpg`
+            khaleet.link = `https://soundcloud.com/hizzme/khaleet${khaleet.id}`
+        })
+        let khaleetSelectorsElemnt = document.getElementById("khaleet-selectors");
+        let khaleetSelectorsHTML = '';
+        let khaleetLink = document.getElementById('khaleet-link');
+
+        if (khaleetSelectorsElemnt) {
+            for (let index = 0; index < khaleets.length; index++) {
+                let khaleet = khaleets[index]
+                khaleetSelectorsHTML += `
+                        <a target="_blank"  href="${khaleet.link}" class="selector khaleet-selector">${khaleet.id > 9 ? '0' : "00"}${khaleet.id} ${khaleet.artist}</a> 
+                        `
+            }
+            khaleetSelectorsElemnt.innerHTML += khaleetSelectorsHTML;
+        }
+        let khaleetSelectors = document.querySelectorAll(".khaleet-selector")
+        if (khaleetSelectors) {
+            khaleetSelectors.forEach((khaleetSelector, index) => {
+                khaleetSelector.addEventListener("mouseover", () => {
+                    residencyBCIMG.src = `../assets/imgs/khaleet/${index + 1}.jpg`
+                    khaleetLink.href = `${khaleets[index].link}`
+                })
+            })
+        }
+    </script>
 </body>
 
 </html>

@@ -818,6 +818,8 @@ if (preEventsListElemnt) {
     preEventsListElemnt.innerHTML = preEventsListHTML;
 }
 
+
+
 let residencyBCElemnt = document.getElementById("residencyBC");
 let residencyBChtml = '';
 if (residencyBCElemnt) {
