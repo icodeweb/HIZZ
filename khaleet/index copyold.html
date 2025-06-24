@@ -28,28 +28,12 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <script defer src="/assets/js/script.js"></script>
     <style>
-        .leftSide,
-        .rightSide {
-            /* border: 1px solid white; */
-        }
-
         .hidden {
             display: none;
         }
 
         .visable {
             display: block;
-            opacity: 1;
-            transition: all .5s;
-        }
-
-        #khaleet-selectors {
-            display: flex;
-            gap: 1rem;
-        }
-
-        #khaleet-selectors a {
-            text-decoration: none;
         }
     </style>
 </head>
@@ -129,17 +113,11 @@
             khaleetSelectorsElemnt.innerHTML += khaleetSelectorsHTML;
         }
         let khaleetSelectors = document.querySelectorAll(".khaleet-selector")
-        let khaleetImgs = document.querySelectorAll(".khaleetImg")
-        let oldImg;
         if (khaleetSelectors) {
             khaleetSelectors.forEach((khaleetSelector, index) => {
                 khaleetSelector.addEventListener("mouseover", () => {
-                    if (oldImg) {
-                        oldImg.classList.toggle("hidden")
-                    }
-                    khaleetImgs[index].classList.toggle("hidden")
-                    oldImg = khaleetImgs[index];
-                    console.log(oldImg);
+                    residencyBCIMG.src = `../assets/imgs/khaleet/${index + 1}.jpg`
+                    khaleetLink.href = `${khaleets[index].link}`
                 })
             })
         }
