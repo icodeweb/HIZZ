@@ -734,17 +734,17 @@ let updates = [
     },
     {
         id: 2,
-        date: "24 may 25",
-        title: "Elkotsh – rhlt jdi out now",
-        content: "Elkotsh’s debut album is here, rhlt jdi blends raw percussion, acid synths, and warped rhythms. It’s a fresh voice in Egypt’s growing electronic scene.",
-        hasImage: true
-    },
-    {
-        id: 3,
         date: "23 may 25",
         title: "New contact email",
         content: "We’ve updated our email. Reach us now at contact@hizz.me instead of the old one.",
         hasImage: false
+    },
+    {
+        id: 3,
+        date: "24 may 25",
+        title: "Elkotsh – rhlt jdi out now",
+        content: "Elkotsh’s debut album is here, rhlt jdi blends raw percussion, acid synths, and warped rhythms. It’s a fresh voice in Egypt’s growing electronic scene.",
+        hasImage: true
     },
 ]
 
@@ -770,21 +770,22 @@ if (NewsElemnt) {
 
 
 let upcomingEvents = [
-    {
-        title: "Mahragan Night / 6600band and Abosahar",
-        date: "May 31, 2025",
-        location: "Cairo Jazz Club",
-        link: "https://cairojazzclub.com/events/view-event/4558/Arabic-Folk",
-        poster: "31may25"
-    },
+    // {
+    //     title: "Mahragan Night / 6600band and Abosahar",
+    //     date: "May 31, 2025",
+    //     location: "Cairo Jazz Club",
+    //     link: "https://cairojazzclub.com/events/view-event/4558/Arabic-Folk",
+    //     poster: "31may25"
+    // },
 ]
 
 let upcomingEventsListElemnt = document.getElementById("upcoming-events-list")
 if (upcomingEventsListElemnt) {
     let upcomingEventsListHTML = ``;
-    upcomingEvents.forEach((event, index) => {
-        if (index < 3) {
-            upcomingEventsListHTML += `
+    if (upcomingEvents.length > 0) {
+        upcomingEvents.forEach((event, index) => {
+            if (index < 3) {
+                upcomingEventsListHTML += `
             <div class="upcoming-event">
                 <a href="${event.link}" target="_blank">
                     <img src="/assets/imgs/eventcovers/${event.poster}.jpg">
@@ -797,9 +798,22 @@ if (upcomingEventsListElemnt) {
                     </div>
                 </a>
             </div>`
-        }
-    })
-    upcomingEventsListElemnt.innerHTML = upcomingEventsListHTML;
+            }
+        })
+        upcomingEventsListElemnt.innerHTML = upcomingEventsListHTML;
+    } else {
+        upcomingEventsListElemnt.innerHTML = `
+            <div class="upcoming-event">
+                <a>
+                    <img src="/assets/imgs/news/logo.jpg">
+                    <div class="upcoming-event-data">
+                        <div>
+                            <p>to be announced</p>
+                        </div>
+                    </div>
+                </a>
+            </div>`;
+    }
 }
 let preEventsListElemnt = document.getElementById("pre-events-list")
 if (preEventsListElemnt) {
@@ -820,28 +834,31 @@ if (preEventsListElemnt) {
 
 
 
-let residencyBCElemnt = document.getElementById("residencyBC");
-let residencyBChtml = '';
-if (residencyBCElemnt) {
-    for (let index = 0; index < residents.length; index++) {
-        let resident = residents[index]
-        residencyBChtml += `
-                        <a class="residentEventLink" href="../residency/${resident.work}">${resident.name}</a>`
-    }
-    residencyBCElemnt.innerHTML += residencyBChtml;
-}
+// let residencyBCElemnt = document.getElementById("residencyBC");
+// let residencyBChtml = '';
+// if (residencyBCElemnt) {
+//     for (let index = 0; index < residents.length; index++) {
+//         let resident = residents[index]
+//         residencyBChtml += `
+//                         <a class="residentEventLink" href="../residency/${resident.work}">${resident.name}</a>`
+//     }
+//     residencyBCElemnt.innerHTML += residencyBChtml;
+// }
 
 // <img src="/assets/imgs/residency/${resident.name.replace(/\s+/g, '')}/cardIMG.jpg" alt="photo of ${resident.name}">
 // residencyBCIMG
 
 
 
-let residentEventLinks = document.querySelectorAll(".residentEventLink")
-let residencyBCIMG = document.getElementById("residencyBCIMG")
-if (residentEventLinks) {
-    residentEventLinks.forEach((link, index) => {
-        link.addEventListener("mouseover", () => {
-            residencyBCIMG.src = `/assets/imgs/residency/${link.innerText.replace(/\s+/g, '')}/cardIMG.jpg`
-        })
-    })
-}
+// let residentEventLinks = document.querySelectorAll(".residentEventLink")
+// let residencyBCIMG = document.getElementById("residencyBCIMG")
+// if (residentEventLinks) {
+//     residentEventLinks.forEach((link, index) => {
+//         link.addEventListener("mouseover", () => {
+//             residencyBCIMG.src = `/assets/imgs/residency/${link.innerText.replace(/\s+/g, '')}/cardIMG.jpg`
+//         })
+//     })
+// }
+
+
+
