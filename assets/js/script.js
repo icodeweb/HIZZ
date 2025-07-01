@@ -834,6 +834,126 @@ if (preEventsListElemnt) {
 
 
 
+let khaleetSelectorsElemnt = document.getElementById("khaleet-selectors");
+if (khaleetSelectorsElemnt) {
+    let khaleets = [{
+        artist: "ONSY",
+        apiTrackId: 383889365
+    }, {
+        artist: "Cartoon Therapy",
+        apiTrackId: 409957755
+    }, {
+        artist: "Shawerma",
+        apiTrackId: 428642133
+    }, {
+        artist: "Bashar Suleiman",
+        apiTrackId: 466834146
+    }, {
+        artist: "ABOsahar",
+        apiTrackId: 479449635
+    }, {
+        artist: "PADFUT",
+        apiTrackId: 512834139
+    }, {
+        artist: "CHE",
+        apiTrackId: 569557503
+    }, {
+        artist: "SPECIAL NID",
+        apiTrackId: 592960167
+    }, {
+        artist: "Drummer B",
+        apiTrackId: 595616214
+    }, {
+        artist: "DG Hadi",
+        apiTrackId: 611639250
+    }, {
+        artist: "L▼TekΛ",
+        apiTrackId: 626492925
+    }, {
+        artist: "BayteeBayteak",
+        apiTrackId: 2119045209
+    }
+    ]
+
+    khaleets.forEach((khaleet, index) => {
+        khaleet.id = index + 1
+        khaleet.imgSrc = `../assets/imgs/khaleet/${khaleet.id}.jpg`
+        khaleet.link = `https://soundcloud.com/hizzme/khaleet${khaleet.id}`
+    })
+
+
+    let khaleetImgsElemnt = document.getElementById("khaleetImgs");
+    let khaleetSelectorsHTML = '';
+    let khaleetImgsHTML = '';
+
+    for (let index = 0; index < khaleets.length; index++) {
+        let khaleet = khaleets[khaleets.length - (index + 1)]
+        khaleetSelectorsHTML += `<div class="selector khaleet-selector"><span><small>${khaleet.id > 9 ? '0' : "00"}${khaleet.id}</small> ${khaleet.artist}</span></div>`
+        khaleetImgsHTML += `<img class="${khaleet.id !== (khaleets.length) ? 'fadeout' : ""} khaleetImg" src="/assets/imgs/khaleet/${khaleets.length - index}.jpg">`
+    }; khaleetSelectorsElemnt.innerHTML += khaleetSelectorsHTML; khaleetImgsElemnt.innerHTML += khaleetImgsHTML;
+
+    let khaleetSelectors = document.querySelectorAll(".khaleet-selector")
+    let khaleetImgs = document.querySelectorAll(".khaleetImg")
+    let soundCloudPlayer = document.getElementById("soundCloudPlayer")
+    soundCloudPlayer.src = `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${khaleets[khaleets.length - 2].apiTrackId}&inverse=true&auto_play=false&show_user=false`;
+
+    let lastKhaleetImage;
+    let currentKhaleetImage;
+    let currentKhaleetLink;
+
+    khaleetSelectors.forEach((khaleetSelector, index) => {
+        // khaleetSelector mouseover
+        khaleetSelector.addEventListener("mouseover", () => {
+            // image
+            currentKhaleetImage = khaleetImgs[index];
+            if (lastKhaleetImage) {
+                lastKhaleetImage.classList.toggle("fadein")
+                lastKhaleetImage.classList.toggle("fadeout")
+            } else {
+                khaleetImgs[0].classList.add("fadeout")
+            }
+            currentKhaleetImage.classList.toggle("fadein")
+            currentKhaleetImage.classList.toggle("fadeout")
+            lastKhaleetImage = currentKhaleetImage;
+
+            // link
+            currentKhaleetLink = khaleets[khaleets.length - index - 1].link;
+            document.getElementById("soundCloudSvgArrowLinkElemnt").setAttribute("href", currentKhaleetLink)
+        })
+        // khaleetSelector click
+        khaleetSelector.addEventListener("click", () => {
+            soundCloudPlayer.src = `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${khaleets[khaleets.length - index - 1].apiTrackId}&inverse=true&auto_play=false&show_user=false`;
+        })
+    })
+
+    // scCircleElemnt
+    let svgArrowElemnt = document.getElementById("soundCloudSvgArrow");
+    document.getElementById("soundCloudSvgArrowLink").addEventListener("mouseenter", () => {
+        svgArrowElemnt.setAttribute("fill", "url(#arrowGradient)")
+        scCircleElemnt.style.display = "flex"
+        movescCircleElemnt = true;
+    })
+    let movescCircleElemnt;
+    document.getElementById("soundCloudSvgArrowLink").addEventListener("mouseleave", () => {
+        svgArrowElemnt.setAttribute("fill", "#ffffff")
+        scCircleElemnt.style.display = "none"
+        movescCircleElemnt = false;
+    })
+    let scCircleElemnt = document.getElementById("scCircle")
+    document.body.addEventListener("mousemove", (e) => {
+        if (movescCircleElemnt) {
+            scCircleElemnt.style.top = `${e.screenY - 70}` + "px"
+            scCircleElemnt.style.left = `${e.screenX + 30}` + "px"
+        }
+    })
+    document.getElementById("soundCloudSvgArrowLinkElemnt").setAttribute("href", khaleets[khaleets.length - 1].link)
+}
+
+
+
+
+
+
 // let residencyBCElemnt = document.getElementById("residencyBC");
 // let residencyBChtml = '';
 // if (residencyBCElemnt) {

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HIZZ / Residency</title>
+    <title>HIZZ / khaleet</title>
     <meta name="description"
         content="CAIRO based record label, artists residency and record store with the aim of promoting avant garde art and music in the arab world and diaspora.">
     <meta name="keywords"
@@ -26,159 +25,84 @@
     <link rel="shortcut icon" href="/assets/imgs/fav.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="/assets/imgs/apple-touch-icon.png">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script defer src="/assets/js/script.js"></script>
     <style>
-        .fadeout {
-            opacity: 0;
-            transition: all 0.5s;
-        }
-
-        .fadein {
-            opacity: 1;
-            transition: all 0.5s;
-        }
-
-        #khaleet-selectors {
-            display: flex;
-            gap: 1rem;
-        }
-
-        #khaleet-selectors a {
-            text-decoration: none;
-        }
-
-        #khaleetImgs {
-            position: relative;
-        }
-
-        .khaleetImg {
-            position: absolute;
-            width: 100%;
+        body,
+        html {
+            height: 100vh;
+            overflow: hidden;
         }
     </style>
+    <script defer src="/assets/js/script.js"></script>
 </head>
 
 <body>
-    <div class="pageContainer">
-        <!-- <img class="logo" src="/assets/imgs/logo.png" alt="logo">
-        <nav>
-            <a href="/" class="subPageLink">
-                <span class="linkLine">|</span>
+    <nav>
+        <div> <a href="/" class="subPageLink">
                 <span>Home</span>
             </a>
             <a href="/releases" class="subPageLink">
-                <span class="linkLine">|</span>
                 <span>Releases</span>
             </a>
             <a href="/events" class="subPageLink">
-                <span class="linkLine">|</span>
                 <span>Events</span>
             </a>
             <a href="/residency" class="subPageLink">
-                <span class="linkLine">|</span>
                 <span>Residency</span></a>
             <a href="/gallery" class="subPageLink">
-                <span>/</span>
                 <span>Gallery</span></a>
             <a href="/about" class="subPageLink">
-                <span class="linkLine">|</span>
                 <span>About</span></a>
-        </nav>
-        <div class="links">
-            <a href="https://hizzme.bandcamp.com" target="_blank"><img src="/assets/imgs/links/bc.png"></a>
-            <a href="https://soundcloud.com/hizzme" target="_blank"><img src="/assets/imgs/links/sc.png"></a>
-            <a href="https://www.instagram.com/hizz.me" target="_blank"><img src="/assets/imgs/links/ig.png"></a>
-        </div> -->
+        </div>
+        <div>
+            <a href="https://hizzme.bandcamp.com" target="_blank">bandcamp</a>
+            <a href="https://soundcloud.com/hizzme" target="_blank">soundcloud</a>
+            <a href="https://www.instagram.com/hizz.me" target="_blank">instagram</a>
+        </div>
+    </nav>
+
+    <div class="pageContainer">
         <section class="twosideSection">
             <div class="leftSide">
                 <div id="khaleetImgs">
-                    <a id="khaleet-link" target="_blank" href="https://soundcloud.com/hizzme/sets/khaleet">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/1.jpg">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/2.jpg">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/3.jpg">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/4.jpg">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/5.jpg">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/6.jpg">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/7.jpg">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/8.jpg">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/9.jpg">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/10.jpg">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/11.jpg">
-                        <img class="fadeout khaleetImg" src="/assets/imgs/khaleet/12.jpg">
+                    <a target="_blank" id="soundCloudSvgArrowLinkElemnt" href="">
+                        <div id="soundCloudSvgArrowLink">
+                            <svg width="100" height="100" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#ff7700" />
+                                        <stop offset="100%" stop-color="#ff3300" />
+                                    </linearGradient>
+                                </defs>
+                                <g transform="scale(1)">
+                                    <path id="soundCloudSvgArrow"
+                                        d="m298.08 0.41406h901.92v901.92l-297.25 297.25v-685.37l-674.3 673.45-218.26-218.26 671.77-671.75h-681.96z"
+                                        fill="#ffffff" />
+                                </g>
+                            </svg>
+                        </div>
                     </a>
                 </div>
             </div>
 
             <div class="rightSide">
+                <p>
+                    <strong>KHALEET</strong> is a mobile mix series showcasing the
+                    best
+                    in
+                    underground music from
+                    across
+                    the Middle East
+                    and diaspora.
+                </p>
+                <iframe id="soundCloudPlayer" width="100%" height="20" scrolling="no" frameborder="no"
+                    allow="autoplay"></iframe>
                 <div id="khaleet-selectors"></div>
             </div>
         </section>
     </div>
+    <div id="scCircle"><span>Play on SoundCloud</span></div>
+    <img class="logox" src="/assets/imgs/logo.png" alt="logo">
     <script>
-        let khaleets = [{
-            artist: "ONSY",
-        }, {
-            artist: "Cartoon Therapy",
-        }, {
-            artist: "Shawerma",
-        }, {
-            artist: "Bashar Suleiman",
-        }, {
-            artist: "ABOsahar",
-        }, {
-            artist: "PADFUT",
-        }, {
-            artist: "CHE",
-        }, {
-            artist: "SPECIAL NID",
-        }, {
-            artist: "Drummer B",
-        }, {
-            artist: "DG Hadi",
-        }, {
-            artist: "L▼TekΛ",
-        }, {
-            artist: "BayteeBayteak",
-        },
-        ]
-
-        khaleets.forEach((khaleet, index) => {
-            khaleet.id = index + 1
-            khaleet.imgSrc = `../assets/imgs/khaleet/${khaleet.id}.jpg`
-            khaleet.link = `https://soundcloud.com/hizzme/khaleet${khaleet.id}`
-        })
-        let khaleetLink = document.getElementById('khaleet-link');
-        let khaleetSelectorsElemnt = document.getElementById("khaleet-selectors");
-        let khaleetSelectorsHTML = '';
-
-        if (khaleetSelectorsElemnt) {
-            for (let index = 0; index < khaleets.length; index++) {
-                let khaleet = khaleets[index]
-                khaleetSelectorsHTML += `
-                        <a target="_blank"  href="${khaleet.link}" class="selector khaleet-selector">${khaleet.id > 9 ? '0' : "00"}${khaleet.id} ${khaleet.artist}</a> 
-                        `
-            }
-            khaleetSelectorsElemnt.innerHTML += khaleetSelectorsHTML;
-        }
-        let khaleetSelectors = document.querySelectorAll(".khaleet-selector")
-        let khaleetImgs = document.querySelectorAll(".khaleetImg")
-        let lastKhaleetImage;
-        let currentKhaleetImage;
-        if (khaleetSelectors) {
-            khaleetSelectors.forEach((khaleetSelector, index) => {
-                khaleetSelector.addEventListener("mouseover", () => {
-                    currentKhaleetImage = khaleetImgs[index];
-                    khaleetLink.href = `${khaleets[index].link}`
-                    if (lastKhaleetImage) {
-                        lastKhaleetImage.classList.toggle("fadein")
-                        lastKhaleetImage.classList.toggle("fadeout")
-                    }
-                    currentKhaleetImage.classList.toggle("fadein")
-                    currentKhaleetImage.classList.toggle("fadeout")
-                    lastKhaleetImage = currentKhaleetImage;
-                })
-            })
-        }
     </script>
 </body>
 
