@@ -600,6 +600,12 @@ let albumsArray = [
         artist: "Elkotsh",
         link: "https://heatcrimes.bandcamp.com/album/rhlt-jdi"
     },
+    {
+        id: 35,
+        title: "blash",
+        artist: "KEK",
+        link: "https://hizzme.bandcamp.com/album/blash"
+    },
 ];
 
 let albums = albumsArray.reverse()
