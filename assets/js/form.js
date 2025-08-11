@@ -18,3 +18,4 @@ document.addEventListener("DOMContentLoaded", function () {
     sendEmail("contactUs", "template_1f7seqq");
     sendEmail("demos", "template_46hwo0c");
 });
+

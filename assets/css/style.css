@@ -27,7 +27,7 @@ video {
 
 :root {
     --navHeight: 4rem;
-    --mainBg: black;
+    --mainBg: rgb(6, 6, 6);
     --mainTextColor: white;
 }
 
@@ -116,7 +116,7 @@ nav {
     position: fixed;
     padding-block: calc(var(--navHeight)/2);
     padding-inline: 3rem;
-    background-color: black;
+    /* background-color: black; */
     z-index: 99999999999999;
     font-weight: 500;
 
@@ -163,6 +163,7 @@ nav {
 
 .album img {
     width: 350px;
+    filter: invert() saturate(2);
 }
 
 .albumInfo {
@@ -310,7 +311,7 @@ button {
 }
 
 .links {
-    display: flex;
+    display: none;
     justify-content: space-between;
     gap: 10px;
     position: fixed;
@@ -370,9 +371,10 @@ button {
     width: 100%;
     overflow: auto;
     padding-left: 20%;
+    padding-right: 10%;
     display: flex;
     justify-content: left;
-    gap: 7rem;
+    gap: 5rem;
 }
 
 .resident {
@@ -903,7 +905,7 @@ details>p {
         flex-direction: column;
         /* gap: 10px; */
         width: 100%;
-        padding: 5% 10% 5% 10%;
+        padding: 5%;
         width: 100%;
     }
 
@@ -913,7 +915,7 @@ details>p {
         justify-content: space-evenly;
         align-items: center;
         border-bottom: 1px solid rgb(61, 61, 61);
-        padding: 1rem 0px;
+        padding: 1.5rem 0px;
     }
 
     .eventsHead {
@@ -1053,7 +1055,7 @@ details>p {
     }
 
     .resident img {
-        filter: grayscale(0) !important;
+        /* filter: grayscale(0) !important; */
         width: 80%;
         height: 80%;
         margin: auto;
@@ -1235,12 +1237,128 @@ details>p {
     .twosideSection {
         flex-direction: column;
     }
+
+    /* khaleet */
+    #khaleet-selectors {
+        display: flex;
+        gap: 1.2rem;
+        cursor: default;
+    }
+
+    #khaleet-selectors a {
+        text-decoration: none;
+    }
+
+    .khaleet-selector {
+        /* width: fit-content; */
+        width: 100%;
+    }
+
+    #khaleetImgs {
+        position: relative;
+        width: 100%;
+        display: none;
+    }
+
+    .khaleetImg {
+        position: absolute;
+        width: 100%;
+    }
+
+    .twosideSection {
+        display: flex;
+        gap: 0rem;
+        height: 100vh;
+        width: 100vw;
+        padding: 4rem 0rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mixespage .pageContainer {
+        /* margin-top: var(--navHeight); */
+    }
+
+    .leftSide,
+    .rightSide {
+        width: 50%;
+        padding-block: 0rem;
+    }
+
+    .mixespage .leftSide,
+    .mixespage .rightSide {
+        width: 80%;
+        padding: 0rem;
+    }
+
+    #soundCloudSvgArrowLink {
+        z-index: 999999999999999;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+    }
+
+    #scCircle {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(to bottom, #ff7700, #ff3300);
+        border-radius: 50%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 999999999999999;
+    }
+
+    #scCircle span {
+        font-size: 8px;
+        text-align: center;
+    }
+
+    #soundCloudSvgArrowLinkElemnt {
+        pointer-events: auto;
+        cursor: pointer;
+    }
+
+    .rightSide {
+        top: 0px;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        /* enable vertical scroll */
+    }
+
+    #khaleet-selectors {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        cursor: cell;
+
+    }
+
+    .rightSide p {
+        font-size: 20px;
+        cursor: help;
+    }
+
+    .rightSide p strong:hover {
+        text-decoration: line-through
+    }
+
+    /* khaleet */
 }
 
 html {
     filter: invert();
 }
 
-img {
+img,
+svg,
+#scCircle {
     filter: invert();
+}
+
+#soundCloudPlayer {
+    /* filter: blur(.0px) invert(); */
 }
