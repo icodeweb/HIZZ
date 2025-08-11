@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HIZZ</title>
+    <title>HIZZ / releases</title>
     <meta name="description"
         content="CAIRO based record label, artists residency and record store with the aim of promoting avant garde art and music in the arab world and diaspora.">
     <meta name="keywords"
@@ -24,19 +24,23 @@
     <meta name="author" content="github/icodeweb">
     <link rel="shortcut icon" href="assets/imgs/fav.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="assets/imgs/apple-touch-icon.png">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
     <div class="pageContainer">
-        <img class="logo" src="assets/imgs/logo.png" alt="logo">
+        <!-- <div class="logo">
+            <div id="logo-handle"></div>
+            <img src="assets/imgs/logo.png" alt="logo">
+        </div> -->
+        <img class="logo" src="/assets/imgs/logo.png" alt="logo">
         <nav>
-            <div> <a href="/" class="subPageLink">
-                    <span>Home</span>
-                </a>
-                <a href="/releases" class="subPageLink">
+            <div>
+                <a href="/" class="subPageLink" style="text-decoration: underline;">
                     <span>Releases</span>
                 </a>
+                <a href="/khaleet" class="subPageLink">
+                    <span>Mixes</span></a>
                 <a href="/events" class="subPageLink">
                     <span>Events</span>
                 </a>
@@ -53,38 +57,15 @@
                 <a href="https://www.instagram.com/hizz.me" target="_blank">instagram</a>
             </div>
         </nav>
-
-        <section class="home" id="home">
-            <div id="late-releases">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <p>latest releases</p>
-                    <small>check <a href="/releases">full catalog</a></small>
-                </div>
-                <div class="last3albums" id="last3albums"></div>
-            </div>
-
-
-            <div id="late-news">
-                <p>latest news & updates</p>
-                <div class="News" id="News"></div>
-            </div>
-
-
-            <div id="upcoming-events">
-                <p>upcoming events</p>
-                <div class="upcoming-events-list" id="upcoming-events-list"></div>
-
-                <div style="display: flex; gap: 1rem ; flex-direction: column;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; ">
-                        <strong>previous events</strong>
-                        <small>check <a href="/events">events page</a></small>
-                    </div>
-                    <div class="pre-events-list" id="pre-events-list"></div>
-                </div>
-            </div>
-        </section>
+        <div class="links">
+            <a href="https://hizzme.bandcamp.com" target="_blank"><img src="/assets/imgs/links/bc.png"></a>
+            <a href="https://soundcloud.com/hizzme" target="_blank"><img src="/assets/imgs/links/sc.png"></a>
+            <a href="https://www.instagram.com/hizz.me" target="_blank"><img src="/assets/imgs/links/ig.png"></a>
+        </div>
+        <section class="albums" id="albums"></section>
     </div>
-    <script defer src="assets/js/script.js"></script>
+    <script defer src="/assets/js/script.js"></script>
+
 </body>
 
 </html>

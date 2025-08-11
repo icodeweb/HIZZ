@@ -680,9 +680,9 @@ if (galleryContiner) {
 let residentsOG = [
     { name: "Abdullah Miniawy", year: "2017", work: "https://soundcloud.com/abdullahmadm/sets/an-overview-of-ihsan-means" },
     { name: "Youssef Abouzeid", year: "2018-2019", work: "https://hizzme.bandcamp.com/album/captain-solo" },
-    { name: "Bashar Suleiman", year: "2018", work: "/BasharSuleiman" },
+    { name: "Bashar Suleiman", year: "2018", work: "https://hizzme.bandcamp.com/album/pink-tape" },
     { name: "Abo Sahar", year: "2018-2019", work: "https://hizzme.bandcamp.com/album/the-caveman" },
-    { name: "Drummer B", year: "2018", work: "/DrummerB" },
+    { name: "Drummer B", year: "2018", work: "https://drummerb.bandcamp.com/album/valley-of-kings-detroit-to-cairo" },
     { name: "Insin", year: "2018", work: "https://hizzme.bandcamp.com/album/sadsun" },
     { name: "Bana Kabalan", year: "2019", work: "https://www.facebook.com/events/783780695327694" },
 ]
